@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NYC Population Density by Neighborhood (2010) — Abdul Sanderson</title>
+  <meta name="description" content="Choropleth map of New York City population density by Neighborhood Tabulation Area using 2010 Census data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav nav--scrolled" id="nav">
+    <a href="../index.html" class="nav__logo">Abdul Sanderson</a>
+    <ul class="nav__links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../portfolio.html">Portfolio</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav__hamburger" id="navHamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__overlay" id="navOverlay"></div>
+  <div class="nav__mobile-menu" id="navMobile">
+    <button class="nav__mobile-close" id="navClose" aria-label="Close menu">&times;</button>
+    <a href="../index.html">Home</a>
+    <a href="../portfolio.html">Portfolio</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+
+  <div class="container">
+    <a href="../portfolio.html" class="back-link">&larr; Back to Portfolio</a>
+
+    <div class="fade-in">
+      <span class="project-detail__badge badge--arcgis">GIS</span>
+      <span class="overline" style="margin-left: 0.5rem; vertical-align: middle;">Urban &amp; Demographic Analysis</span>
+    </div>
+
+    <h1 class="project-detail__title fade-in">NYC Population Density by Neighborhood (2010)</h1>
+
+    <p class="project-detail__desc fade-in">
+      A choropleth map visualizing 2010 U.S. Census population density across
+      New York City's Neighborhood Tabulation Areas (NTAs) — medium-sized
+      statistical geographies whose boundaries correspond to commonly recognized
+      NYC neighborhoods. The map reveals stark intra-city variation: 10 NTAs
+      exceeded 100,000 residents per square mile, all concentrated in Manhattan
+      and the Bronx, while Staten Island and outer Queens remained well below
+      20,000 per square mile.
+    </p>
+
+    <div class="embed-container fade-in">
+      <img src="../assets/images/projects/nyc-density.png" alt="NYC Population Density by Neighborhood Tabulation Area, 2010">
+    </div>
+
+    <div class="project-detail__findings fade-in">
+      <h3>Key Findings</h3>
+      <ul>
+        <li>Mapped population density across all five boroughs using 2010 Decennial Census data joined to NTA boundaries.</li>
+        <li>Identified 10 NTAs with density exceeding 100,000 people per square mile, all located in Manhattan and the Bronx.</li>
+        <li>Visualized borough-level contrasts: Manhattan and the Bronx anchor the highest-density zones, while Staten Island and outer Queens remain predominantly below 20,000 per square mile.</li>
+        <li>Used a six-class sequential color scheme to communicate density gradients clearly across the full range of NYC neighborhoods.</li>
+      </ul>
+    </div>
+
+    <div class="project-detail__tools fade-in" style="padding-bottom: 4rem;">
+      <h3>Tools &amp; Methods</h3>
+      <div class="tools-list">
+        <span class="tag">QGIS</span>
+        <span class="tag">Choropleth Mapping</span>
+        <span class="tag">Census Data</span>
+        <span class="tag">NTA Boundaries</span>
+        <span class="tag">Spatial Joins</span>
+        <span class="tag">Urban Analysis</span>
+      </div>
+      <div style="margin-top: 1.5rem;">
+        <a href="../assets/docs/nyc-density.pdf" target="_blank" class="btn btn--outline" style="font-size:0.875rem;">View Full Map PDF &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <h2 class="footer__heading">Get in Touch</h2>
+    <div class="footer__contact">
+      <div class="footer__contact-group">
+        <p class="footer__contact-label">Email</p>
+        <a href="mailto:asande51@jh.edu">asande51@jh.edu</a>
+        <a href="mailto:aymsanderson@gmail.com">aymsanderson@gmail.com</a>
+        <a href="mailto:abdul.sanderson@fulbrightmail.org">abdul.sanderson@fulbrightmail.org</a>
+      </div>
+      <div class="footer__contact-group">
+        <p class="footer__contact-label">Connect</p>
+        <a href="https://www.linkedin.com/in/abdulsanderson" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <p class="footer__copy">&copy; 2026 Abdul Sanderson. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
