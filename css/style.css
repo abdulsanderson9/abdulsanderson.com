@@ -471,7 +471,6 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 .education-card {
-  position: relative;
   background: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: 8px;
@@ -479,23 +478,37 @@ h4 { font-size: 1rem; font-weight: 600; }
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
-.education-card--has-crest {
-  padding-right: calc(1.75rem + 80px + 0.75rem);
-}
-
 .education-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
+/* Flex header: meta text left, crest right */
+.education-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-card__meta {
+  flex: 1;
+  min-width: 0;
+}
+
 .education-card__crest {
-  position: absolute;
-  top: 1.75rem;
-  right: 1.75rem;
+  flex-shrink: 0;
   height: 64px;
-  width: 80px;
+  width: auto;
+  max-width: 80px;
   object-fit: contain;
   object-position: top right;
+}
+
+.education-card__crest--lg {
+  height: 84px;
+  max-width: 104px;
 }
 
 .education-card__degree {
@@ -518,10 +531,12 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 .education-card__details {
-  font-size: 0.8125rem;
+  font-size: 0.67rem;
   color: var(--color-text);
   margin-top: 0.5rem;
-  line-height: 1.6;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .education-card__coursework {
@@ -543,6 +558,10 @@ h4 { font-size: 1rem; font-weight: 600; }
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
+}
+
+.education-card__courses .tag {
+  white-space: nowrap;
 }
 
 /* ── Languages ── */
@@ -901,10 +920,6 @@ h4 { font-size: 1rem; font-weight: 600; }
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .education-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
