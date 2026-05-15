@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Abdul Sanderson</title>
+  <meta name="description" content="Data analytics portfolio — ArcGIS maps, Power BI dashboards, Tableau visualizations, and Excel models by Abdul Sanderson.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav nav--scrolled" id="nav">
+    <a href="index.html" class="nav__logo">Abdul Sanderson</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav__hamburger" id="navHamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__overlay" id="navOverlay"></div>
+  <div class="nav__mobile-menu" id="navMobile">
+    <button class="nav__mobile-close" id="navClose" aria-label="Close menu">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+
+  <!-- Page Header -->
+  <div class="container page-header">
+    <h1>Portfolio</h1>
+    <p class="subtitle">Interactive data projects, geospatial analysis, and dashboards</p>
+  </div>
+
+  <!-- Filter + Grid -->
+  <div class="container" style="padding-bottom: 4rem;">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="arcgis">ArcGIS</button>
+      <button class="filter-btn" data-filter="powerbi">Power BI</button>
+      <button class="filter-btn" data-filter="tableau">Tableau</button>
+      <button class="filter-btn" data-filter="excel">Excel</button>
+    </div>
+
+    <div class="project-grid project-grid--2col">
+
+      <a href="projects/sample-project.html" class="project-card fade-in" data-category="arcgis" style="text-decoration:none; color:inherit;">
+        <div class="project-card__preview" style="background: linear-gradient(135deg, #dbeafe, #bfdbfe);">
+          <span class="project-card__badge badge--arcgis">ArcGIS</span>
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">Trade Flow Analysis</h3>
+          <p class="project-card__desc">Geospatial analysis of bilateral trade patterns across Sub-Saharan Africa using ArcGIS Pro.</p>
+          <div class="project-card__tags">
+            <span class="tag">Geospatial</span>
+            <span class="tag">Trade</span>
+          </div>
+          <span class="project-card__link">View Project &rarr;</span>
+        </div>
+      </a>
+
+      <a href="#" class="project-card fade-in" data-category="powerbi" style="text-decoration:none; color:inherit;">
+        <div class="project-card__preview" style="background: linear-gradient(135deg, #fef3c7, #fde68a);">
+          <span class="project-card__badge badge--powerbi">Power BI</span>
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">Economic Indicators Dashboard</h3>
+          <p class="project-card__desc">Interactive dashboard tracking key economic indicators across developing economies.</p>
+          <div class="project-card__tags">
+            <span class="tag">Dashboard</span>
+            <span class="tag">Economics</span>
+          </div>
+          <span class="project-card__link">View Project &rarr;</span>
+        </div>
+      </a>
+
+      <a href="#" class="project-card fade-in" data-category="tableau" style="text-decoration:none; color:inherit;">
+        <div class="project-card__preview" style="background: linear-gradient(135deg, #d1fae5, #a7f3d0);">
+          <span class="project-card__badge badge--tableau">Tableau</span>
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">FDI Analysis Visualization</h3>
+          <p class="project-card__desc">Tableau dashboard analyzing foreign direct investment trends and capital flows.</p>
+          <div class="project-card__tags">
+            <span class="tag">FDI</span>
+            <span class="tag">Visualization</span>
+          </div>
+          <span class="project-card__link">View Project &rarr;</span>
+        </div>
+      </a>
+
+      <a href="#" class="project-card fade-in" data-category="excel" style="text-decoration:none; color:inherit;">
+        <div class="project-card__preview" style="background: linear-gradient(135deg, #e0e7ff, #c7d2fe);">
+          <span class="project-card__badge badge--excel">Excel</span>
+        </div>
+        <div class="project-card__body">
+          <h3 class="project-card__title">Financial Model</h3>
+          <p class="project-card__desc">Complex Excel financial model for evaluating development project feasibility.</p>
+          <div class="project-card__tags">
+            <span class="tag">Finance</span>
+            <span class="tag">Modeling</span>
+          </div>
+          <span class="project-card__link">View Project &rarr;</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <h2 class="footer__heading">Get in Touch</h2>
+    <div class="footer__links">
+      <a href="mailto:placeholder@email.com">Email</a>
+      <a href="https://linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="footer__copy">&copy; 2025 Abdul Sanderson. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
