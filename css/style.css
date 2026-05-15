@@ -454,6 +454,21 @@ h4 { font-size: 1rem; font-weight: 600; }
   box-shadow: var(--shadow-md);
 }
 
+.education-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-card__crest {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .education-card__degree {
   font-size: 1rem;
   font-weight: 600;
