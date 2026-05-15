@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdul Sanderson — Economic Officer & Data Analyst</title>
+  <meta name="description" content="Portfolio of Abdul Sanderson — FSO Economic Officer, Rangel Fellow, and data analyst specializing in geospatial analysis, economic policy, and data visualization.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">Abdul Sanderson</a>
+    <ul class="nav__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav__hamburger" id="navHamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__overlay" id="navOverlay"></div>
+  <div class="nav__mobile-menu" id="navMobile">
+    <button class="nav__mobile-close" id="navClose" aria-label="Close menu">&times;</button>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+      <div class="hero__content fade-in">
+        <p class="overline">U.S. Foreign Service</p>
+        <h1 class="hero__name">Abdul Sanderson</h1>
+        <p class="hero__title">Economic Officer | Data Analyst | Policy Professional</p>
+        <p class="hero__intro">
+          Rangel Fellow and SAIS graduate with expertise in economic diplomacy,
+          geospatial analysis, and data-driven policy. Passionate about leveraging
+          data analytics to inform foreign policy and international development.
+        </p>
+        <div class="hero__buttons">
+          <a href="portfolio.html" class="btn btn--primary">View Portfolio</a>
+          <a href="assets/docs/resume.pdf" class="btn btn--outline" target="_blank">Download CV</a>
+        </div>
+      </div>
+      <img src="assets/images/headshot-placeholder.svg" alt="Abdul Sanderson" class="hero__photo fade-in">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__header fade-in">
+        <p class="overline">About</p>
+        <h2>Background</h2>
+      </div>
+      <p class="fade-in" style="max-width: 680px; line-height: 1.8; color: var(--color-text);">
+        Abdul Sanderson is a Rangel Fellow and graduate of the Johns Hopkins School
+        of Advanced International Studies (SAIS), where he focused on international
+        economics and quantitative methods. He brings a unique combination of policy
+        expertise and technical data skills to the field of economic diplomacy.
+        His work spans geospatial analysis, financial modeling, and interactive
+        data visualization, with a focus on trade, development finance, and
+        emerging markets. He will begin serving as an Economic Officer in the
+        U.S. Foreign Service in 2025.
+      </p>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section section--alt" id="experience">
+    <div class="container">
+      <div class="section__header fade-in">
+        <p class="overline">Experience</p>
+        <h2>Career Timeline</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <h4 class="timeline__role">FSO Economic Officer</h4>
+          <p class="timeline__org">U.S. Department of State &middot; Starting 2025</p>
+          <p class="timeline__desc">
+            Incoming Economic Officer in the U.S. Foreign Service, focusing on
+            economic diplomacy, trade policy, and international development.
+          </p>
+        </div>
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <h4 class="timeline__role">Rangel Fellow</h4>
+          <p class="timeline__org">Johns Hopkins SAIS &middot; 2023&ndash;2025</p>
+          <p class="timeline__desc">
+            Charles B. Rangel International Affairs Fellow. Studied international
+            economics and quantitative policy analysis at the School of Advanced
+            International Studies.
+          </p>
+        </div>
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <h4 class="timeline__role">Previous Role</h4>
+          <p class="timeline__org">Organization &middot; Dates</p>
+          <p class="timeline__desc">
+            Description of previous professional experience and responsibilities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Preview -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section__header fade-in">
+        <p class="overline">Portfolio</p>
+        <h2>Featured Projects</h2>
+      </div>
+      <div class="project-grid">
+        <a href="projects/sample-project.html" class="project-card fade-in" style="text-decoration:none; color:inherit;">
+          <div class="project-card__preview" style="background: linear-gradient(135deg, #dbeafe, #bfdbfe);">
+            <span class="project-card__badge badge--arcgis">ArcGIS</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Trade Flow Analysis</h3>
+            <p class="project-card__desc">Geospatial analysis of bilateral trade patterns across Sub-Saharan Africa using ArcGIS Pro.</p>
+            <div class="project-card__tags">
+              <span class="tag">Geospatial</span>
+              <span class="tag">Trade</span>
+            </div>
+            <span class="project-card__link">View Project &rarr;</span>
+          </div>
+        </a>
+        <a href="#" class="project-card fade-in" style="text-decoration:none; color:inherit;">
+          <div class="project-card__preview" style="background: linear-gradient(135deg, #fef3c7, #fde68a);">
+            <span class="project-card__badge badge--powerbi">Power BI</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Economic Indicators Dashboard</h3>
+            <p class="project-card__desc">Interactive dashboard tracking key economic indicators across developing economies.</p>
+            <div class="project-card__tags">
+              <span class="tag">Dashboard</span>
+              <span class="tag">Economics</span>
+            </div>
+            <span class="project-card__link">View Project &rarr;</span>
+          </div>
+        </a>
+        <a href="#" class="project-card fade-in" style="text-decoration:none; color:inherit;">
+          <div class="project-card__preview" style="background: linear-gradient(135deg, #d1fae5, #a7f3d0);">
+            <span class="project-card__badge badge--tableau">Tableau</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">FDI Analysis Visualization</h3>
+            <p class="project-card__desc">Tableau dashboard analyzing foreign direct investment trends and capital flows.</p>
+            <div class="project-card__tags">
+              <span class="tag">FDI</span>
+              <span class="tag">Visualization</span>
+            </div>
+            <span class="project-card__link">View Project &rarr;</span>
+          </div>
+        </a>
+      </div>
+      <div class="view-all fade-in">
+        <a href="portfolio.html">View All Projects &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="section section--alt" id="certifications">
+    <div class="container">
+      <div class="section__header fade-in">
+        <p class="overline">Certifications</p>
+        <h2>Credentials</h2>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card fade-in">
+          <h4 class="cert-card__name">Certification Name</h4>
+          <p class="cert-card__org">Issuing Organization &middot; 2024</p>
+        </div>
+        <div class="cert-card fade-in">
+          <h4 class="cert-card__name">Certification Name</h4>
+          <p class="cert-card__org">Issuing Organization &middot; 2024</p>
+        </div>
+        <div class="cert-card fade-in">
+          <h4 class="cert-card__name">Certification Name</h4>
+          <p class="cert-card__org">Issuing Organization &middot; 2023</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <footer class="footer" id="contact">
+    <h2 class="footer__heading">Get in Touch</h2>
+    <div class="footer__links">
+      <a href="mailto:placeholder@email.com">Email</a>
+      <a href="https://linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="footer__copy">&copy; 2025 Abdul Sanderson. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
