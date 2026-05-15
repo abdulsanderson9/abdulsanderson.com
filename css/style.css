@@ -466,7 +466,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 /* ── Education ── */
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
@@ -476,8 +476,11 @@ h4 { font-size: 1rem; font-weight: 600; }
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 1.75rem;
-  padding-right: calc(1.75rem + 64px + 0.5rem);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.education-card--has-crest {
+  padding-right: calc(1.75rem + 64px + 0.5rem);
 }
 
 .education-card:hover {
@@ -519,6 +522,27 @@ h4 { font-size: 1rem; font-weight: 600; }
   color: var(--color-text);
   margin-top: 0.5rem;
   line-height: 1.6;
+}
+
+.education-card__coursework {
+  margin-top: 0.875rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.education-card__coursework-label {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.education-card__courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
 }
 
 /* ── Languages ── */
@@ -877,6 +901,10 @@ h4 { font-size: 1rem; font-weight: 600; }
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .education-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
