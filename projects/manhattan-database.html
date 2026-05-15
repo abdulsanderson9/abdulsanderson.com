@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manhattan Building Database — Abdul Sanderson</title>
+  <meta name="description" content="Geospatial database analysis of Manhattan buildings and boundaries using QGIS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav nav--scrolled" id="nav">
+    <a href="../index.html" class="nav__logo">Abdul Sanderson</a>
+    <ul class="nav__links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../portfolio.html">Portfolio</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav__hamburger" id="navHamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__overlay" id="navOverlay"></div>
+  <div class="nav__mobile-menu" id="navMobile">
+    <button class="nav__mobile-close" id="navClose" aria-label="Close menu">&times;</button>
+    <a href="../index.html">Home</a>
+    <a href="../portfolio.html">Portfolio</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+
+  <div class="container">
+    <a href="../portfolio.html" class="back-link">&larr; Back to Portfolio</a>
+
+    <div class="fade-in">
+      <span class="project-detail__badge badge--arcgis">GIS</span>
+      <span class="overline" style="margin-left: 0.5rem; vertical-align: middle;">Geospatial Database</span>
+    </div>
+
+    <h1 class="project-detail__title fade-in">Manhattan Building Database Analysis</h1>
+
+    <p class="project-detail__desc fade-in">
+      A geospatial database project analyzing Manhattan&rsquo;s building footprints
+      and administrative boundaries. Using QGIS and GeoPackage data, this project
+      involved clipping building layers to boundary extents, performing spatial
+      queries, and visualizing urban density patterns across Manhattan.
+    </p>
+
+    <div class="embed-container fade-in">
+      <div style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.5rem;">
+        <p style="font-size:1rem;color:var(--color-text-muted);font-weight:500;">Project Screenshot</p>
+        <p style="font-size:0.8125rem;color:var(--color-text-faint);">Add screenshot: assets/images/projects/manhattan-database.png</p>
+      </div>
+    </div>
+
+    <div class="project-detail__findings fade-in">
+      <h3>Key Aspects</h3>
+      <ul>
+        <li>Built and managed a geospatial database of Manhattan building footprints using GeoPackage format.</li>
+        <li>Performed spatial clipping operations to extract buildings within specific boundary zones.</li>
+        <li>Analyzed urban density patterns and building distribution across the borough.</li>
+      </ul>
+    </div>
+
+    <div class="project-detail__tools fade-in" style="padding-bottom: 4rem;">
+      <h3>Tools &amp; Methods</h3>
+      <div class="tools-list">
+        <span class="tag">QGIS</span>
+        <span class="tag">GeoPackage</span>
+        <span class="tag">Spatial Queries</span>
+        <span class="tag">Database Management</span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <h2 class="footer__heading">Get in Touch</h2>
+    <div class="footer__links">
+      <a href="mailto:asande51@jh.edu">Email</a>
+      <a href="https://www.linkedin.com/in/abdulsanderson" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="footer__copy">&copy; 2026 Abdul Sanderson. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
