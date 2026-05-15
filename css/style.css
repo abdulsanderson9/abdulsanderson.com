@@ -338,6 +338,35 @@ h4 { font-size: 1rem; font-weight: 600; }
   gap: 1.5rem;
 }
 
+.project-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+}
+
+.project-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.project-scroll::-webkit-scrollbar-track {
+  background: var(--color-surface-alt);
+  border-radius: 2px;
+}
+
+.project-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 2px;
+}
+
+.project-scroll .project-card {
+  min-width: 300px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
 .project-grid--2col {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -454,19 +483,20 @@ h4 { font-size: 1rem; font-weight: 600; }
   box-shadow: var(--shadow-md);
 }
 
-.education-card__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-}
-
 .education-card__crest {
-  height: 64px;
+  float: right;
+  height: 60px;
   width: auto;
   object-fit: contain;
-  flex-shrink: 0;
+  margin: 0 0 0.75rem 1rem;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.education-card::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 .education-card__degree {
@@ -581,6 +611,40 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 .footer__links a:hover {
+  color: var(--color-white);
+}
+
+.footer__contact {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer__contact-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.footer__contact-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 0.15rem;
+}
+
+.footer__contact-group a {
+  font-size: 0.875rem;
+  color: var(--color-primary-pale);
+  transition: color var(--transition-base);
+}
+
+.footer__contact-group a:hover {
   color: var(--color-white);
 }
 
