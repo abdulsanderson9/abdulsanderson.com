@@ -854,14 +854,16 @@ h4 { font-size: 1rem; font-weight: 600; }
   object-fit: contain;
 }
 
+.pdf-section {
+  max-width: 1200px;
+  margin: 0 auto 2.5rem;
+  padding: 0 2rem;
+}
+
 .pdf-embed {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(1400px, 92vw);
+  width: 100%;
   aspect-ratio: 16 / 9;
-  min-height: 500px;
-  margin-bottom: 2.5rem;
+  min-height: 480px;
   border-radius: 10px;
   overflow: hidden;
   border: 2px solid var(--color-border);
