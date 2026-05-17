@@ -70,56 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ── Certificate Lightbox ──
-  var certModal    = document.getElementById('certModal');
-  var certModalImg = document.getElementById('certModalImg');
-  var certClose    = document.getElementById('certModalClose');
-  var certBackdrop = document.getElementById('certModalBackdrop');
-
-  function openCertModal(src, label) {
-    certModalImg.src = src;
-    certModalImg.alt = label;
-    certModal.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeCertModal() {
-    certModal.classList.remove('is-open');
-    certModalImg.src = '';
-    document.body.style.overflow = '';
-  }
-
-  if (certModal) {
-    document.querySelectorAll('.cert-card--has-image').forEach(function (card) {
-      card.addEventListener('click', function () {
-        openCertModal(card.dataset.certSrc, card.dataset.certLabel);
-      });
-      card.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          openCertModal(card.dataset.certSrc, card.dataset.certLabel);
-        }
-      });
-    });
-
-    if (certClose)    certClose.addEventListener('click', closeCertModal);
-    if (certBackdrop) certBackdrop.addEventListener('click', closeCertModal);
-
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && certModal.classList.contains('is-open')) {
-        closeCertModal();
-      }
-    });
-
-    // Block right-click on all certificate images (thumbnails + modal)
-    document.addEventListener('contextmenu', function (e) {
-      if (e.target.closest('.cert-card__preview') ||
-          e.target.closest('.cert-modal__container')) {
-        e.preventDefault();
-      }
-    });
-  }
-
   // ── Portfolio Filter (only on portfolio page) ──
   var filterBtns = document.querySelectorAll('.filter-btn');
   var projectCards = document.querySelectorAll('.project-card[data-category]');
