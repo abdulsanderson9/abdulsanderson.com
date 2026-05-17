@@ -340,6 +340,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 
 .project-scroll {
   display: flex;
+  align-items: stretch;
   gap: 1.5rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -372,6 +373,8 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   background: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: 10px;
@@ -417,6 +420,9 @@ h4 { font-size: 1rem; font-weight: 600; }
 .badge--excel { background: var(--color-excel); }
 
 .project-card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: 1.25rem;
 }
 
@@ -457,6 +463,7 @@ h4 { font-size: 1rem; font-weight: 600; }
   font-size: 0.8125rem;
   font-weight: 500;
   color: var(--color-primary);
+  margin-top: auto;
 }
 
 .project-card__link:hover {
@@ -622,6 +629,45 @@ h4 { font-size: 1rem; font-weight: 600; }
   font-size: 0.8125rem;
   color: var(--color-text-muted);
   margin-top: 0.25rem;
+}
+
+.cert-card--has-image {
+  padding: 0;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.cert-card--has-image .cert-card__name,
+.cert-card--has-image .cert-card__org {
+  padding: 0 1.5rem;
+}
+
+.cert-card--has-image .cert-card__name {
+  padding-top: 0.875rem;
+}
+
+.cert-card--has-image .cert-card__org {
+  padding-bottom: 1rem;
+}
+
+.cert-card__preview {
+  height: 140px;
+  overflow: hidden;
+  background: var(--color-surface-alt);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-card__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.625rem;
+  box-sizing: border-box;
 }
 
 /* ── Footer ── */
