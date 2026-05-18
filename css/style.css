@@ -476,6 +476,12 @@ h4 { font-size: 1rem; font-weight: 600; }
 }
 
 /* ── Education ── */
+.education-grid-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 .education-grid {
   display: flex;
   gap: 1.5rem;
@@ -485,7 +491,6 @@ h4 { font-size: 1rem; font-weight: 600; }
 .education-card {
   flex: 1 1 0;
   min-width: 0;
-  overflow: hidden;
   background: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: 8px;
@@ -550,8 +555,6 @@ h4 { font-size: 1rem; font-weight: 600; }
   color: var(--color-text);
   margin-top: 0.5rem;
   line-height: 1.5;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .education-card__coursework {
@@ -1042,6 +1045,10 @@ h4 { font-size: 1rem; font-weight: 600; }
 
   .cert-grid {
     grid-template-columns: 1fr;
+  }
+
+  .education-grid-wrapper {
+    padding: 0 1rem;
   }
 
   .education-grid {
