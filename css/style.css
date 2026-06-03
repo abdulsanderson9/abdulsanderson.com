@@ -317,6 +317,21 @@ h4 { font-size: 1rem; font-weight: 600; }
   box-shadow: 0 0 0 2px var(--color-primary-pale);
 }
 
+.timeline__item:nth-child(4) .timeline__dot {
+  background: #60a5fa;
+  box-shadow: 0 0 0 2px #60a5fa;
+}
+
+.timeline__item:nth-child(5) .timeline__dot {
+  background: #93c5fd;
+  box-shadow: 0 0 0 2px #93c5fd;
+}
+
+.timeline__item:nth-child(6) .timeline__dot {
+  background: #bfdbfe;
+  box-shadow: 0 0 0 2px #bfdbfe;
+}
+
 .timeline__role {
   font-size: 1.0625rem;
   font-weight: 600;
@@ -365,6 +380,22 @@ h4 { font-size: 1rem; font-weight: 600; }
 .project-scroll::-webkit-scrollbar-thumb {
   background: var(--color-border);
   border-radius: 2px;
+}
+
+.project-scroll-wrapper {
+  position: relative;
+}
+
+.project-scroll-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 1rem;
+  width: 80px;
+  background: linear-gradient(to right, transparent, var(--color-white));
+  pointer-events: none;
+  z-index: 1;
 }
 
 .project-scroll .project-card {
@@ -1017,6 +1048,12 @@ a.cert-card--has-image {
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .cert-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
