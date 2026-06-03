@@ -645,6 +645,9 @@ h4 { font-size: 1rem; font-weight: 600; }
   text-decoration: none;
   color: inherit;
   display: block;
+}
+
+a.cert-card--has-image {
   cursor: pointer;
 }
 
