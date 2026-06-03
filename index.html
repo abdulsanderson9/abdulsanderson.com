@@ -29,6 +29,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -45,6 +46,7 @@
     <a href="#about">About</a>
     <a href="#education">Education</a>
     <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
@@ -273,6 +275,60 @@
     </div>
   </section>
 
+  <!-- Skills -->
+  <section class="section section--alt" id="skills">
+    <div class="container">
+      <div class="section__header fade-in">
+        <p class="overline">Skills</p>
+        <h2>Technical Proficiencies</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category fade-in">
+          <p class="skill-category__label">Geospatial &amp; Mapping</p>
+          <div class="skill-category__tags">
+            <span class="tag">QGIS</span>
+            <span class="tag">ArcGIS Pro</span>
+            <span class="tag">DEM Analysis</span>
+            <span class="tag">Choropleth Mapping</span>
+            <span class="tag">Spatial Joins</span>
+            <span class="tag">Raster Processing</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <p class="skill-category__label">Data Analysis</p>
+          <div class="skill-category__tags">
+            <span class="tag">R</span>
+            <span class="tag">Python</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Statistical Analysis</span>
+            <span class="tag">Regression Modeling</span>
+            <span class="tag">Cost-Benefit Analysis</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <p class="skill-category__label">Visualization &amp; Reporting</p>
+          <div class="skill-category__tags">
+            <span class="tag">Tableau</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">PowerPoint</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">Dashboard Design</span>
+          </div>
+        </div>
+        <div class="skill-category fade-in">
+          <p class="skill-category__label">Policy Research</p>
+          <div class="skill-category__tags">
+            <span class="tag">Policy Memo Writing</span>
+            <span class="tag">Economic Analysis</span>
+            <span class="tag">Trade Facilitation</span>
+            <span class="tag">Qualitative Research</span>
+            <span class="tag">Country Risk Assessment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Portfolio Preview -->
   <section class="section" id="portfolio">
     <div class="container">
@@ -458,6 +514,30 @@
   <!-- Contact / Footer -->
   <footer class="footer" id="contact">
     <h2 class="footer__heading">Get in Touch</h2>
+
+    <!-- Contact form — powered by Formspree.                              -->
+    <!-- To activate: sign up at formspree.io, create a form, and replace -->
+    <!-- YOUR_FORMSPREE_ID below with your actual form ID.                -->
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="contact-form">
+      <div class="contact-form__row">
+        <div class="contact-form__group">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="contact-form__group">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" placeholder="your@email.com" required>
+        </div>
+      </div>
+      <div class="contact-form__group">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" placeholder="What would you like to say?" required></textarea>
+      </div>
+      <button type="submit" class="btn btn--outline">Send Message</button>
+    </form>
+
+    <div class="contact-form__divider">or reach me directly</div>
+
     <div class="footer__contact">
       <div class="footer__contact-group">
         <p class="footer__contact-label">Email</p>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Abdul Sanderson</title>
+  <meta name="description" content="The page you're looking for doesn't exist.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav nav--scrolled" id="nav">
+    <a href="index.html" class="nav__logo">Abdul Sanderson</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav__hamburger" id="navHamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__overlay" id="navOverlay"></div>
+  <div class="nav__mobile-menu" id="navMobile">
+    <button class="nav__mobile-close" id="navClose" aria-label="Close menu">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+
+  <div class="not-found">
+    <p class="not-found__code">404</p>
+    <h1 class="not-found__title">Page Not Found</h1>
+    <p class="not-found__desc">The page you're looking for doesn't exist or may have been moved.</p>
+    <div class="not-found__actions">
+      <a href="index.html" class="btn btn--primary">Go Home</a>
+      <a href="portfolio.html" class="btn btn--outline">View Portfolio</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <h2 class="footer__heading">Get in Touch</h2>
+    <div class="footer__contact">
+      <div class="footer__contact-group">
+        <p class="footer__contact-label">Email</p>
+        <a href="mailto:aymsanderson@gmail.com">aymsanderson@gmail.com</a>
+      </div>
+      <div class="footer__contact-group">
+        <p class="footer__contact-label">Connect</p>
+        <a href="https://www.linkedin.com/in/abdulsanderson" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <p class="footer__copy">&copy; 2026 Abdul Sanderson. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
