@@ -722,6 +722,44 @@ h4 { font-size: 1rem; font-weight: 600; }
   color: var(--color-white);
 }
 
+.contact-form .btn--outline:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.contact-form__success {
+  display: none;
+  max-width: 480px;
+  margin: 0 auto 1.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  background: rgba(134, 239, 172, 0.1);
+  border: 1px solid rgba(134, 239, 172, 0.3);
+  color: #86efac;
+  font-size: 0.9375rem;
+  text-align: center;
+}
+
+.contact-form__error-banner:not(:empty) {
+  max-width: 480px;
+  margin: 0 auto 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  background: rgba(252, 165, 165, 0.1);
+  border: 1px solid rgba(252, 165, 165, 0.3);
+  color: #fca5a5;
+  font-size: 0.8125rem;
+  text-align: center;
+}
+
+.contact-form__field-error:not(:empty) {
+  display: block;
+  font-size: 0.75rem;
+  color: #fca5a5;
+  margin-top: 0.25rem;
+}
+
 .contact-form__divider {
   display: flex;
   align-items: center;
