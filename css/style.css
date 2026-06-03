@@ -658,7 +658,7 @@ h4 { font-size: 1rem; font-weight: 600; }
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
-.cert-card:hover {
+a.cert-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
