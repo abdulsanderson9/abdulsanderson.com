@@ -17,6 +17,7 @@
   --color-excel: #6366f1;
   --color-urban: #f97316;
   --color-finance: #0ea5e9;
+  --color-policy: #059669;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
   --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
@@ -424,6 +425,7 @@ h4 { font-size: 1rem; font-weight: 600; }
 .badge--excel { background: var(--color-excel); }
 .badge--urban { background: var(--color-urban); }
 .badge--finance { background: var(--color-finance); }
+.badge--policy { background: var(--color-policy); }
 
 .project-card__body {
   flex: 1;
