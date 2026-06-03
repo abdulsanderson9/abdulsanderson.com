@@ -500,6 +500,11 @@ h4 { font-size: 1rem; font-weight: 600; }
   border-radius: 4px;
 }
 
+.tag__level {
+  color: var(--color-text-faint);
+  margin-left: 0.2rem;
+}
+
 .project-card__link {
   font-size: 0.8125rem;
   font-weight: 500;
@@ -819,30 +824,6 @@ h4 { font-size: 1rem; font-weight: 600; }
   gap: 0.75rem;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-/* ── Languages ── */
-.languages {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-
-.language {
-  text-align: center;
-}
-
-.language__name {
-  font-size: 0.9375rem;
-  font-weight: 600;
-  color: var(--color-text-dark);
-}
-
-.language__level {
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-  margin-top: 0.125rem;
 }
 
 /* ── Certifications ── */
