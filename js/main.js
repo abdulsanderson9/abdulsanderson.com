@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // ── Portfolio Filter (only on portfolio page) ──
   var filterBtns = document.querySelectorAll('.filter-btn');
   var projectCards = document.querySelectorAll('.project-card[data-category]');
+  var filterEmpty = document.getElementById('filterEmpty');
 
   if (filterBtns.length > 0) {
     filterBtns.forEach(function (btn) {
@@ -82,8 +83,10 @@ document.addEventListener('DOMContentLoaded', function () {
         filterBtns.forEach(function (b) { b.classList.remove('active'); });
         btn.classList.add('active');
 
+        var visibleCount = 0;
         projectCards.forEach(function (card) {
           if (filter === 'all' || card.dataset.category === filter) {
+            visibleCount++;
             card.style.opacity = '0';
             card.style.transform = 'translateY(10px)';
             card.style.display = '';
@@ -99,6 +102,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 300);
           }
         });
+
+        if (filterEmpty) {
+          filterEmpty.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
       });
     });
   }
