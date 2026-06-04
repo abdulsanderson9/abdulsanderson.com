@@ -887,7 +887,7 @@ a.cert-card--has-image {
 .cert-card__preview {
   height: 140px;
   overflow: hidden;
-  background: var(--color-white);
+  background: var(--color-surface-alt);
   border-bottom: 1px solid var(--color-border);
   display: flex;
   align-items: center;
