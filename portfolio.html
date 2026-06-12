@@ -13,209 +13,227 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://abdulsanderson.com/portfolio.html">
   <meta property="og:title" content="Portfolio — Abdul Sanderson">
-  <meta property="og:description" content="Geospatial analysis, policy presentations, and data visualizations by Abdul Sanderson.">
   <meta property="og:image" content="https://abdulsanderson.com/assets/images/headshot.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Portfolio — Abdul Sanderson">
-  <meta name="twitter:description" content="Geospatial analysis, policy presentations, and data visualizations by Abdul Sanderson.">
-  <meta name="twitter:image" content="https://abdulsanderson.com/assets/images/headshot.jpg">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav nav--scrolled" id="nav">
-    <a href="index.html" class="nav__logo">Abdul Sanderson</a>
-    <ul class="nav__links">
-      <li><a href="index.html">Home</a></li>
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__identity">
+      <p class="sidebar__name">Abdul Sanderson</p>
+      <p class="sidebar__tagline">Rangel Fellow &middot; SAIS &rsquo;26</p>
+    </div>
+
+    <p class="sidebar__section-label">Navigate</p>
+    <ul class="sidebar__nav">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#education">Education</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
       <li><a href="portfolio.html" class="active" aria-current="page">Portfolio</a></li>
+      <li><a href="index.html#certifications">Credentials</a></li>
       <li><a href="index.html#contact">Contact</a></li>
     </ul>
-    <button class="nav__hamburger" id="navHamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
 
-  <!-- Mobile Menu -->
-  <div class="nav__overlay" id="navOverlay"></div>
-  <div class="nav__mobile-menu" id="navMobile">
-    <button class="nav__mobile-close" id="navClose" aria-label="Close menu">&times;</button>
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="index.html#contact">Contact</a>
-  </div>
-
-  <!-- Page Header -->
-  <div class="container page-header">
-    <h1>Portfolio</h1>
-    <p class="subtitle">Geospatial analysis, policy presentations, and data visualizations</p>
-  </div>
-
-  <!-- Filter + Grid -->
-  <div class="container" style="padding-bottom: 4rem;">
-    <div class="filter-bar">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="arcgis">ArcGIS</button>
-      <button class="filter-btn" data-filter="powerbi">Power BI</button>
-      <button class="filter-btn" data-filter="tableau">Tableau</button>
-      <button class="filter-btn" data-filter="excel">Excel</button>
-      <button class="filter-btn" data-filter="pptx">PowerPoint</button>
-    </div>
-
-    <p class="filter-empty" id="filterEmpty" style="display:none;">No projects in this category yet — check back soon.</p>
-    <div class="project-grid project-grid--2col">
-
-      <a href="projects/hcmc-sea-level-rise.html" class="project-card fade-in" data-category="arcgis" style="text-decoration:none; color:inherit;">
-        <div class="project-card__preview">
-          <img src="assets/images/projects/hcmc-slr.png" alt="HCMC Sea Level Rise Analysis">
-          <span class="project-card__badge badge--arcgis">GIS</span>
+    <div class="sidebar__legend">
+      <p class="sidebar__legend-label">Color key</p>
+      <div class="sidebar__legend-items">
+        <div class="sidebar__legend-item">
+          <span class="sidebar__legend-dot" style="background:#1a5c38;"></span>
+          Education
         </div>
-        <div class="project-card__body">
-          <h3 class="project-card__title">HCMC Sea Level Rise Analysis</h3>
-          <p class="project-card__desc">Geospatial risk analysis of sea level rise impact on Ho Chi Minh City using DEM data and population projections.</p>
-          <div class="project-card__tags">
-            <span class="tag">Climate Risk</span>
-            <span class="tag">DEM</span>
-            <span class="tag">Population</span>
-          </div>
-          <span class="project-card__link">View Project &rarr;</span>
+        <div class="sidebar__legend-item">
+          <span class="sidebar__legend-dot" style="background:#c8b97a;"></span>
+          Experience
         </div>
-      </a>
-
-      <a href="projects/spatial-analysis.html" class="project-card fade-in" data-category="arcgis" style="text-decoration:none; color:inherit;">
-        <div class="project-card__preview">
-          <img src="assets/images/projects/spatial-analysis.png" alt="Census &amp; Building Spatial Analysis">
-          <span class="project-card__badge badge--arcgis">GIS</span>
+        <div class="sidebar__legend-item">
+          <span class="sidebar__legend-dot" style="background:#8b4513;"></span>
+          Projects
         </div>
-        <div class="project-card__body">
-          <h3 class="project-card__title">Census &amp; Building Spatial Analysis</h3>
-          <p class="project-card__desc">Comparative spatial analysis of census demographics and building infrastructure between 2020 and 2100 projections.</p>
-          <div class="project-card__tags">
-            <span class="tag">Spatial Joins</span>
-            <span class="tag">Census</span>
-          </div>
-          <span class="project-card__link">View Project &rarr;</span>
-        </div>
-      </a>
-
-      <a href="projects/manhattan-database.html" class="project-card fade-in" data-category="arcgis" style="text-decoration:none; color:inherit;">
-        <div class="project-card__preview">
-          <img src="assets/images/projects/manhattan-database.png" alt="Manhattan Building Database">
-          <span class="project-card__badge badge--arcgis">GIS</span>
-        </div>
-        <div class="project-card__body">
-          <h3 class="project-card__title">Manhattan Building Database</h3>
-          <p class="project-card__desc">Geospatial database analysis of Manhattan building footprints and administrative boundaries using QGIS.</p>
-          <div class="project-card__tags">
-            <span class="tag">Database</span>
-            <span class="tag">Urban</span>
-          </div>
-          <span class="project-card__link">View Project &rarr;</span>
-        </div>
-      </a>
-
-      <a href="projects/nyc-population-density.html" class="project-card fade-in" data-category="arcgis" style="text-decoration:none; color:inherit;">
-        <div class="project-card__preview">
-          <img src="assets/images/projects/nyc-density.png" alt="NYC Population Density by Neighborhood (2010)">
-          <span class="project-card__badge badge--arcgis">GIS</span>
-        </div>
-        <div class="project-card__body">
-          <h3 class="project-card__title">NYC Population Density by Neighborhood (2010)</h3>
-          <p class="project-card__desc">Choropleth map of 2010 Census population density across NYC's Neighborhood Tabulation Areas, revealing sharp borough-level contrasts.</p>
-          <div class="project-card__tags">
-            <span class="tag">Choropleth</span>
-            <span class="tag">Census</span>
-            <span class="tag">Urban</span>
-          </div>
-          <span class="project-card__link">View Project &rarr;</span>
-        </div>
-      </a>
-
-      <a href="projects/lubumbashi-urban-economics.html" class="project-card fade-in" data-category="pptx" style="text-decoration:none; color:inherit;">
-        <div class="project-card__preview">
-          <img src="assets/images/projects/lubumbashi.png" alt="Lubumbashi Urban Economics Case Study">
-          <span class="project-card__badge badge--urban">Urban</span>
-        </div>
-        <div class="project-card__body">
-          <h3 class="project-card__title">Lubumbashi: Mining Rents &amp; Urban Form</h3>
-          <p class="project-card__desc">Case study examining how copper mining rents shape the spatial structure, labor markets, and built environment of a resource-dependent city in the DRC.</p>
-          <div class="project-card__tags">
-            <span class="tag">Consumption City</span>
-            <span class="tag">Urban Economics</span>
-            <span class="tag">PowerPoint</span>
-          </div>
-          <span class="project-card__link">View Presentation &rarr;</span>
-        </div>
-      </a>
-
-      <a href="projects/brazil-1999-crisis.html" class="project-card fade-in" data-category="pptx" style="text-decoration:none; color:inherit;">
-        <div class="project-card__preview">
-          <img src="assets/images/projects/brazil-1999.png" alt="Brazil 1999 Currency Crisis — The Samba Effect">
-          <span class="project-card__badge badge--finance">Finance</span>
-        </div>
-        <div class="project-card__body">
-          <h3 class="project-card__title">Brazil 1999: The Samba Effect</h3>
-          <p class="project-card__desc">Case study of Brazil's 1999 currency crisis — from crawling-peg collapse and ~50% real depreciation to the macroeconomic tripod and V-shaped recovery.</p>
-          <div class="project-card__tags">
-            <span class="tag">Currency Crisis</span>
-            <span class="tag">Emerging Markets</span>
-            <span class="tag">PowerPoint</span>
-          </div>
-          <span class="project-card__link">View Presentation &rarr;</span>
-        </div>
-      </a>
-
-      <a href="projects/central-eurasia-practicum.html" class="project-card fade-in" data-category="pptx" style="text-decoration:none; color:inherit;">
-        <div class="project-card__preview">
-          <img src="assets/images/projects/central-eurasia-practicum.png" alt="Central Eurasia Practicum: From Transit to Transformation">
-          <span class="project-card__badge badge--policy">Policy</span>
-        </div>
-        <div class="project-card__body">
-          <h3 class="project-card__title">From Transit to Transformation: Central Asia &amp; South Caucasus</h3>
-          <p class="project-card__desc">Policy presentation to the World Bank Territorial Development Team on trade corridor soft infrastructure and structural transformation across seven CASC countries.</p>
-          <div class="project-card__tags">
-            <span class="tag">Trade Facilitation</span>
-            <span class="tag">Central Asia</span>
-            <span class="tag">PowerPoint</span>
-          </div>
-          <span class="project-card__link">View Presentation &rarr;</span>
-        </div>
-      </a>
-
-      <a href="projects/latam-violence-dashboard.html" class="project-card fade-in" data-category="powerbi" style="text-decoration:none; color:inherit;">
-        <div class="project-card__preview">
-          <img src="assets/images/projects/latam-violence-dashboard.png" alt="Latin America Armed Conflict &amp; Cartel Violence Dashboard">
-          <span class="project-card__badge badge--powerbi">Power BI</span>
-        </div>
-        <div class="project-card__body">
-          <h3 class="project-card__title">Latin America Armed Conflict &amp; Cartel Violence Dashboard</h3>
-          <p class="project-card__desc">Interactive dashboard tracking 146K conflict events and 130K fatalities across 17 Latin American countries from 2019 to 2024.</p>
-          <div class="project-card__tags">
-            <span class="tag">Conflict Analysis</span>
-            <span class="tag">Latin America</span>
-            <span class="tag">Power BI</span>
-          </div>
-          <span class="project-card__link">View Dashboard &rarr;</span>
-        </div>
-      </a>
-
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer" id="contact">
-    <h2 class="footer__heading">Get in Touch</h2>
-    <div class="footer__contact">
-      <div class="footer__contact-group">
-        <p class="footer__contact-label">Email</p>
-        <a href="mailto:aymsanderson@gmail.com">aymsanderson@gmail.com</a>
-      </div>
-      <div class="footer__contact-group">
-        <p class="footer__contact-label">Connect</p>
-        <a href="https://www.linkedin.com/in/abdulsanderson" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
-    <p class="footer__copy">&copy; 2026 Abdul Sanderson. All rights reserved.</p>
-  </footer>
+  </aside>
+
+  <div class="sidebar__overlay" id="sidebarOverlay"></div>
+  <button class="sidebar__hamburger" id="sidebarHamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <main class="main-content">
+
+    <div class="container page-header">
+      <p class="overline">Work</p>
+      <h1>Portfolio</h1>
+      <p class="subtitle">Geospatial analysis, policy presentations, and data visualizations</p>
+    </div>
+
+    <div class="container" style="padding-bottom: 4rem;">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="arcgis">ArcGIS</button>
+        <button class="filter-btn" data-filter="powerbi">Power BI</button>
+        <button class="filter-btn" data-filter="tableau">Tableau</button>
+        <button class="filter-btn" data-filter="excel">Excel</button>
+        <button class="filter-btn" data-filter="pptx">PowerPoint</button>
+      </div>
+
+      <p class="filter-empty" id="filterEmpty" style="display:none;">No projects in this category yet — check back soon.</p>
+
+      <div class="project-grid project-grid--2col">
+
+        <a href="projects/hcmc-sea-level-rise.html" class="project-card fade-in" data-category="arcgis" style="text-decoration:none;color:inherit;">
+          <div class="project-card__preview">
+            <img src="assets/images/projects/hcmc-slr.png" alt="HCMC Sea Level Rise Analysis">
+            <span class="project-card__badge badge--arcgis">GIS</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">HCMC Sea Level Rise Analysis</h3>
+            <p class="project-card__desc">Geospatial risk analysis of sea level rise impact on Ho Chi Minh City using DEM data and population projections.</p>
+            <div class="project-card__tags">
+              <span class="tag">Climate Risk</span>
+              <span class="tag">DEM</span>
+              <span class="tag">Population</span>
+            </div>
+            <span class="project-card__link">View Project &rarr;</span>
+          </div>
+        </a>
+
+        <a href="projects/spatial-analysis.html" class="project-card fade-in" data-category="arcgis" style="text-decoration:none;color:inherit;">
+          <div class="project-card__preview">
+            <img src="assets/images/projects/spatial-analysis.png" alt="Census &amp; Building Spatial Analysis">
+            <span class="project-card__badge badge--arcgis">GIS</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Census &amp; Building Spatial Analysis</h3>
+            <p class="project-card__desc">Comparative spatial analysis of census demographics and building infrastructure between 2020 and 2100 projections.</p>
+            <div class="project-card__tags">
+              <span class="tag">Spatial Joins</span>
+              <span class="tag">Census</span>
+            </div>
+            <span class="project-card__link">View Project &rarr;</span>
+          </div>
+        </a>
+
+        <a href="projects/manhattan-database.html" class="project-card fade-in" data-category="arcgis" style="text-decoration:none;color:inherit;">
+          <div class="project-card__preview">
+            <img src="assets/images/projects/manhattan-database.png" alt="Manhattan Building Database">
+            <span class="project-card__badge badge--arcgis">GIS</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Manhattan Building Database</h3>
+            <p class="project-card__desc">Geospatial database analysis of Manhattan building footprints and administrative boundaries using QGIS.</p>
+            <div class="project-card__tags">
+              <span class="tag">Database</span>
+              <span class="tag">Urban</span>
+            </div>
+            <span class="project-card__link">View Project &rarr;</span>
+          </div>
+        </a>
+
+        <a href="projects/nyc-population-density.html" class="project-card fade-in" data-category="arcgis" style="text-decoration:none;color:inherit;">
+          <div class="project-card__preview">
+            <img src="assets/images/projects/nyc-density.png" alt="NYC Population Density (2010)">
+            <span class="project-card__badge badge--arcgis">GIS</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">NYC Population Density by Neighborhood (2010)</h3>
+            <p class="project-card__desc">Choropleth map of 2010 Census population density across NYC's Neighborhood Tabulation Areas, revealing sharp borough-level contrasts.</p>
+            <div class="project-card__tags">
+              <span class="tag">Choropleth</span>
+              <span class="tag">Census</span>
+              <span class="tag">Urban</span>
+            </div>
+            <span class="project-card__link">View Project &rarr;</span>
+          </div>
+        </a>
+
+        <a href="projects/lubumbashi-urban-economics.html" class="project-card fade-in" data-category="pptx" style="text-decoration:none;color:inherit;">
+          <div class="project-card__preview">
+            <img src="assets/images/projects/lubumbashi.png" alt="Lubumbashi Urban Economics">
+            <span class="project-card__badge badge--urban">Urban</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Lubumbashi: Mining Rents &amp; Urban Form</h3>
+            <p class="project-card__desc">Case study examining how copper mining rents shape the spatial structure, labor markets, and built environment of a resource-dependent city in the DRC.</p>
+            <div class="project-card__tags">
+              <span class="tag">Consumption City</span>
+              <span class="tag">Urban Economics</span>
+              <span class="tag">PowerPoint</span>
+            </div>
+            <span class="project-card__link">View Presentation &rarr;</span>
+          </div>
+        </a>
+
+        <a href="projects/brazil-1999-crisis.html" class="project-card fade-in" data-category="pptx" style="text-decoration:none;color:inherit;">
+          <div class="project-card__preview">
+            <img src="assets/images/projects/brazil-1999.png" alt="Brazil 1999 Currency Crisis">
+            <span class="project-card__badge badge--finance">Finance</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Brazil 1999: The Samba Effect</h3>
+            <p class="project-card__desc">Case study of Brazil's 1999 currency crisis — from crawling-peg collapse and ~50% real depreciation to the macroeconomic tripod and V-shaped recovery.</p>
+            <div class="project-card__tags">
+              <span class="tag">Currency Crisis</span>
+              <span class="tag">Emerging Markets</span>
+              <span class="tag">PowerPoint</span>
+            </div>
+            <span class="project-card__link">View Presentation &rarr;</span>
+          </div>
+        </a>
+
+        <a href="projects/central-eurasia-practicum.html" class="project-card fade-in" data-category="pptx" style="text-decoration:none;color:inherit;">
+          <div class="project-card__preview">
+            <img src="assets/images/projects/central-eurasia-practicum.png" alt="Central Eurasia Practicum">
+            <span class="project-card__badge badge--policy">Policy</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">From Transit to Transformation: Central Asia &amp; South Caucasus</h3>
+            <p class="project-card__desc">Policy presentation to the World Bank Territorial Development Team on trade corridor soft infrastructure and structural transformation across seven CASC countries.</p>
+            <div class="project-card__tags">
+              <span class="tag">Trade Facilitation</span>
+              <span class="tag">Central Asia</span>
+              <span class="tag">PowerPoint</span>
+            </div>
+            <span class="project-card__link">View Presentation &rarr;</span>
+          </div>
+        </a>
+
+        <a href="projects/latam-violence-dashboard.html" class="project-card fade-in" data-category="powerbi" style="text-decoration:none;color:inherit;">
+          <div class="project-card__preview">
+            <img src="assets/images/projects/latam-violence-dashboard.png" alt="Latin America Armed Conflict Dashboard">
+            <span class="project-card__badge badge--powerbi">Power BI</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Latin America Armed Conflict &amp; Cartel Violence Dashboard</h3>
+            <p class="project-card__desc">Interactive dashboard tracking 146K conflict events and 130K fatalities across 17 Latin American countries from 2019 to 2024.</p>
+            <div class="project-card__tags">
+              <span class="tag">Conflict Analysis</span>
+              <span class="tag">Latin America</span>
+              <span class="tag">Power BI</span>
+            </div>
+            <span class="project-card__link">View Dashboard &rarr;</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <footer class="footer" id="contact">
+      <h2 class="footer__heading">Get in Touch</h2>
+      <div class="footer__contact">
+        <div class="footer__contact-group">
+          <p class="footer__contact-label">Email</p>
+          <a href="mailto:aymsanderson@gmail.com">aymsanderson@gmail.com</a>
+        </div>
+        <div class="footer__contact-group">
+          <p class="footer__contact-label">Connect</p>
+          <a href="https://www.linkedin.com/in/abdulsanderson" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <p class="footer__copy">&copy; 2026 Abdul Sanderson. All rights reserved.</p>
+    </footer>
+
+  </main>
 
   <script src="js/main.js"></script>
 </body>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abdul Sanderson — Data Analyst & Policy Professional</title>
-  <meta name="description" content="Portfolio of Abdul Sanderson — Rangel Fellow, Johns Hopkins SAIS graduate student, and data analyst specializing in geospatial analysis, economic policy, and data visualization.">
+  <meta name="description" content="Portfolio of Abdul Sanderson — Rangel Fellow, Johns Hopkins SAIS graduate, and data analyst specializing in geospatial analysis, economic policy, and data visualization.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,554 +13,752 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://abdulsanderson.com/">
   <meta property="og:title" content="Abdul Sanderson — Data Analyst & Policy Professional">
-  <meta property="og:description" content="Portfolio of Abdul Sanderson — Rangel Fellow, Johns Hopkins SAIS graduate student, and data analyst specializing in geospatial analysis, economic policy, and data visualization.">
+  <meta property="og:description" content="Rangel Fellow, Johns Hopkins SAIS. Geospatial analysis, economic policy, and data visualization.">
   <meta property="og:image" content="https://abdulsanderson.com/assets/images/headshot.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Abdul Sanderson — Data Analyst & Policy Professional">
-  <meta name="twitter:description" content="Portfolio of Abdul Sanderson — Rangel Fellow, Johns Hopkins SAIS graduate student, and data analyst specializing in geospatial analysis, economic policy, and data visualization.">
-  <meta name="twitter:image" content="https://abdulsanderson.com/assets/images/headshot.jpg">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <a href="index.html" class="nav__logo" aria-current="page">Abdul Sanderson</a>
-    <ul class="nav__links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="nav__hamburger" id="navHamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__identity">
+      <p class="sidebar__name">Abdul Sanderson</p>
+      <p class="sidebar__tagline">Rangel Fellow &middot; SAIS &rsquo;26</p>
+    </div>
 
-  <!-- Mobile Menu -->
-  <div class="nav__overlay" id="navOverlay"></div>
-  <div class="nav__mobile-menu" id="navMobile">
-    <button class="nav__mobile-close" id="navClose" aria-label="Close menu">&times;</button>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
+    <p class="sidebar__section-label">Navigate</p>
+    <ul class="sidebar__nav" id="sidebarNav">
+      <li><a href="#about"         class="nav-link">About</a></li>
+      <li><a href="#education"     class="nav-link">Education</a></li>
+      <li><a href="#experience"    class="nav-link">Experience</a></li>
+      <li><a href="#skills"        class="nav-link">Skills</a></li>
+      <li><a href="portfolio.html"               >Portfolio</a></li>
+      <li><a href="#certifications" class="nav-link">Credentials</a></li>
+      <li><a href="#contact"       class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="sidebar__legend">
+      <p class="sidebar__legend-label">Color key</p>
+      <div class="sidebar__legend-items">
+        <div class="sidebar__legend-item">
+          <span class="sidebar__legend-dot" style="background:#1a5c38;"></span>
+          Education
+        </div>
+        <div class="sidebar__legend-item">
+          <span class="sidebar__legend-dot" style="background:#c8b97a;"></span>
+          Experience
+        </div>
+        <div class="sidebar__legend-item">
+          <span class="sidebar__legend-dot" style="background:#8b4513;"></span>
+          Projects
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mobile controls -->
+  <div class="sidebar__overlay" id="sidebarOverlay"></div>
+  <button class="sidebar__hamburger" id="sidebarHamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- ── Main Content ── -->
+  <main class="main-content">
+
+    <!-- Hero / About -->
+    <section class="hero" id="about">
+      <div class="container">
+        <div class="hero__layout">
+          <div class="hero__content fade-in">
+            <p class="hero__eyebrow">International Relations &middot; Data Analytics &middot; Diplomacy</p>
+            <h1 class="hero__name">Abdul Sanderson</h1>
+            <div class="hero__rule"></div>
+            <p class="hero__intro">
+              Rangel Fellow and Johns Hopkins SAIS graduate with expertise in
+              international economics, data analytics, and diplomatic engagement.
+              Fulbright alumnus with experience across Central Asia, Capitol Hill,
+              and U.S. embassies. Fluent in Russian and Spanish.
+            </p>
+            <div class="hero__buttons">
+              <a href="portfolio.html" class="btn btn--primary">View Portfolio</a>
+              <a href="assets/docs/resume.pdf" class="btn btn--outline" target="_blank" rel="noopener">Download CV</a>
+            </div>
+          </div>
+          <img src="assets/images/headshot.jpg" alt="Abdul Sanderson" class="hero__photo fade-in" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- About detail -->
+    <section class="section" id="about-detail">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="overline">Background</p>
+          <h2>About</h2>
+        </div>
+        <div class="about__body fade-in">
+          <p>
+            Abdul Sanderson is a Charles B. Rangel International Affairs Fellow
+            pursuing a Master of Arts in International Relations at the Johns Hopkins
+            School of Advanced International Studies (SAIS), focusing on International
+            Economics and Finance with a regional concentration on the Americas and
+            Europe &amp; Eurasia. He holds a B.A. in Economics and International Relations
+            from SUNY Geneseo, graduating cum laude.
+          </p>
+          <p>
+            His career spans economic analysis, diplomacy, and education — from
+            drafting policy memos at the U.S. Embassy in Ashgabat, Turkmenistan, to
+            serving as a Fulbright English Teaching Assistant in Kyrgyzstan, to
+            conducting regulatory cost analysis at Industrial Economics, Inc.
+            He brings skills in GIS, Tableau, Excel, R, and four languages
+            (English, Russian, Spanish, Kyrgyz) to his work in economic diplomacy and
+            international development.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section section--alt" id="education">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="overline">Education</p>
+          <h2>Academic Background</h2>
+        </div>
+      </div>
+      <div class="education-grid-wrapper">
+        <div class="education-grid">
+
+          <a href="education/sais.html" class="education-card fade-in">
+            <div class="education-card__header">
+              <div class="education-card__meta">
+                <h4 class="education-card__degree">M.A. International Relations</h4>
+                <p class="education-card__school">Johns Hopkins SAIS</p>
+                <p class="education-card__date">Washington, DC &middot; May 2026</p>
+              </div>
+              <img src="assets/images/sais-crest.png" alt="Johns Hopkins SAIS" class="education-card__crest education-card__crest--lg">
+            </div>
+            <p class="education-card__details">GPA: 3.59 &middot; International Economics &amp; Finance &middot; Americas, Europe &amp; Eurasia</p>
+            <div class="education-card__coursework">
+              <p class="education-card__coursework-label">Selected Coursework</p>
+              <div class="education-card__courses">
+                <span class="tag">Corporate Finance</span>
+                <span class="tag">Urban Economics</span>
+                <span class="tag">International Investment Law</span>
+                <span class="tag">Sanctions &amp; Their Effects</span>
+                <span class="tag">GIS: Energy &amp; Environment</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="education/geneseo.html" class="education-card fade-in">
+            <div class="education-card__header">
+              <div class="education-card__meta">
+                <h4 class="education-card__degree">B.A. Economics &amp; International Relations</h4>
+                <p class="education-card__school">SUNY Geneseo</p>
+                <p class="education-card__date">Geneseo, NY &middot; May 2020 &middot; Cum Laude</p>
+              </div>
+              <img src="assets/images/geneseo-crest.png" alt="SUNY Geneseo" class="education-card__crest">
+            </div>
+            <p class="education-card__details">GPA: 3.56 &middot; Dean's List &middot; Sigma Iota Rho &middot; Study Abroad: Universit&eacute; de Fribourg</p>
+            <div class="education-card__coursework">
+              <p class="education-card__coursework-label">Selected Coursework</p>
+              <div class="education-card__courses">
+                <span class="tag">U.S. Foreign Policy</span>
+                <span class="tag">Econometrics</span>
+                <span class="tag">International Trade &amp; Economic Policy</span>
+                <span class="tag">Labor Economics</span>
+                <span class="tag">Money &amp; Financial Intermediation</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="education/jefferson.html" class="education-card fade-in">
+            <div class="education-card__header">
+              <div class="education-card__meta">
+                <h4 class="education-card__degree">A.A. Humanities &amp; Social Sciences</h4>
+                <p class="education-card__school">SUNY Jefferson Community College</p>
+                <p class="education-card__date">Watertown, NY &middot; May 2017 &middot; High Honors</p>
+              </div>
+              <img src="assets/images/jcc-crest.png" alt="SUNY Jefferson" class="education-card__crest">
+            </div>
+            <p class="education-card__details">GPA: 4.0 &middot; President's List &middot; Phi Theta Kappa (Chapter President)</p>
+            <div class="education-card__coursework">
+              <p class="education-card__coursework-label">Selected Coursework</p>
+              <div class="education-card__courses">
+                <span class="tag">World Affairs</span>
+                <span class="tag">Cultural Anthropology</span>
+                <span class="tag">Western Civilization I &amp; II</span>
+                <span class="tag">Environmental Biology</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience — Story Map -->
+    <section class="story-section" id="experience">
+
+      <!-- Tall scroll container — height set by JS -->
+      <div class="story-scroll-outer" id="storyScrollOuter">
+
+        <!-- Sticky viewport-height panel -->
+        <div class="story-sticky" id="storySicky">
+
+          <!-- Top chrome: section label + progress trail -->
+          <div class="story-chrome">
+            <div class="story-chrome__label">
+              <p class="overline" style="margin:0;">Experience &amp; Education</p>
+              <p class="story-chrome__hint">Scroll to travel &darr;</p>
+            </div>
+            <div class="story-chrome__trail">
+              <div class="story-trail__line"><div class="story-trail__fill" id="storyTrailFill"></div></div>
+              <div class="story-trail__dots" id="storyTrailDots">
+                <button class="story-dot active" data-stop="0" title="Jefferson CC — Watertown, NY" aria-label="Stop 1: Jefferson CC"></button>
+                <button class="story-dot" data-stop="1" title="SUNY Geneseo" aria-label="Stop 2: SUNY Geneseo"></button>
+                <button class="story-dot" data-stop="2" title="Study Abroad — Fribourg, Switzerland" aria-label="Stop 3: Study Abroad"></button>
+                <button class="story-dot" data-stop="3" title="Industrial Economics, Inc. — Cambridge, MA" aria-label="Stop 4: Industrial Economics"></button>
+                <button class="story-dot" data-stop="4" title="Fulbright ETA — Naryn, Kyrgyzstan" aria-label="Stop 5: Fulbright"></button>
+                <button class="story-dot" data-stop="5" title="U.S. House of Representatives — Washington, D.C." aria-label="Stop 6: Congress"></button>
+                <button class="story-dot" data-stop="6" title="U.S. Embassy Ashgabat — Turkmenistan" aria-label="Stop 7: Embassy"></button>
+                <button class="story-dot" data-stop="7" title="Johns Hopkins SAIS — Washington, D.C." aria-label="Stop 8: SAIS"></button>
+              </div>
+              <p class="story-chrome__counter"><span id="storyCounter">1</span> / 8</p>
+            </div>
+          </div>
+
+          <!-- Horizontal track — moved by JS transform -->
+          <div class="story-track-outer">
+            <div class="story-track" id="storyTrack">
+
+              <!-- 0 · Jefferson CC -->
+              <div class="story-panel" data-stop="0" data-type="education">
+                <div class="story-panel__map" style="--accent:var(--color-green);">
+                  <p class="story-panel__map-region">North America</p>
+                  <p class="story-panel__map-place">Watertown,<br>New York</p>
+                  <p class="story-panel__map-coord">43°58′N &nbsp; 75°54′W</p>
+                  <p class="story-panel__map-year">2015</p>
+                  <div class="story-panel__map-dot"></div>
+                </div>
+                <div class="story-panel__content">
+                  <p class="story-panel__dates story-panel__dates--edu">2015 – 2017</p>
+                  <h2 class="story-panel__role">A.A. Humanities &amp; Social Sciences</h2>
+                  <p class="story-panel__org">SUNY Jefferson Community College</p>
+                  <p class="story-panel__desc">Graduated with High Honors (GPA 4.0), President&rsquo;s List every semester. Served as Chapter President of Phi Theta Kappa Honor Society — the world&rsquo;s largest two-year college honor society. This foundation in humanities and social sciences set the course for a career in international affairs.</p>
+                  <div class="story-panel__tags">
+                    <span class="tag">GPA 4.0</span>
+                    <span class="tag">President&rsquo;s List</span>
+                    <span class="tag">Phi Theta Kappa — Chapter President</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 1 · SUNY Geneseo -->
+              <div class="story-panel" data-stop="1" data-type="education">
+                <div class="story-panel__map" style="--accent:var(--color-green);">
+                  <p class="story-panel__map-region">North America</p>
+                  <p class="story-panel__map-place">Geneseo,<br>New York</p>
+                  <p class="story-panel__map-coord">42°47′N &nbsp; 77°48′W</p>
+                  <p class="story-panel__map-year">2017</p>
+                  <div class="story-panel__map-dot"></div>
+                </div>
+                <div class="story-panel__content">
+                  <p class="story-panel__dates story-panel__dates--edu">2017 – 2020</p>
+                  <h2 class="story-panel__role">B.A. Economics &amp; International Relations</h2>
+                  <p class="story-panel__org">SUNY Geneseo &mdash; Cum Laude</p>
+                  <p class="story-panel__desc">Dean&rsquo;s List, GPA 3.56. Member of Sigma Iota Rho International Honor Society and Chapter Vice President of Alpha Kappa Psi Business Fraternity. Completed a semester abroad at the Université de Fribourg in Switzerland. Graduated cum laude with a rigorous double major in quantitative economics and international relations.</p>
+                  <div class="story-panel__tags">
+                    <span class="tag">GPA 3.56</span>
+                    <span class="tag">Cum Laude</span>
+                    <span class="tag">Sigma Iota Rho</span>
+                    <span class="tag">Alpha Kappa Psi — VP</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2 · Study Abroad -->
+              <div class="story-panel" data-stop="2" data-type="education">
+                <div class="story-panel__map" style="--accent:var(--color-green);">
+                  <p class="story-panel__map-region">Europe</p>
+                  <p class="story-panel__map-place">Fribourg,<br>Switzerland</p>
+                  <p class="story-panel__map-coord">46°48′N &nbsp; 7°09′E</p>
+                  <p class="story-panel__map-year">2019</p>
+                  <div class="story-panel__map-dot"></div>
+                </div>
+                <div class="story-panel__content">
+                  <p class="story-panel__dates story-panel__dates--edu">Spring 2019</p>
+                  <h2 class="story-panel__role">Study Abroad &mdash; International Economics</h2>
+                  <p class="story-panel__org">Université de Fribourg</p>
+                  <p class="story-panel__desc">Spent a semester studying international economics and French at one of Switzerland&rsquo;s bilingual universities, situated at the linguistic border between German and French-speaking Switzerland. Deepened both analytical knowledge in European economic policy and language proficiency in French within a multilingual academic environment.</p>
+                  <div class="story-panel__tags">
+                    <span class="tag">International Economics</span>
+                    <span class="tag">French Language</span>
+                    <span class="tag">Europe</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3 · Industrial Economics -->
+              <div class="story-panel" data-stop="3" data-type="experience">
+                <div class="story-panel__map" style="--accent:var(--color-gold);">
+                  <p class="story-panel__map-region">North America</p>
+                  <p class="story-panel__map-place">Cambridge,<br>Massachusetts</p>
+                  <p class="story-panel__map-coord">42°22′N &nbsp; 71°06′W</p>
+                  <p class="story-panel__map-year">2022</p>
+                  <div class="story-panel__map-dot"></div>
+                </div>
+                <div class="story-panel__content">
+                  <p class="story-panel__dates story-panel__dates--exp">2022 – 2023</p>
+                  <h2 class="story-panel__role">Research Analyst</h2>
+                  <p class="story-panel__org">Industrial Economics, Inc.</p>
+                  <p class="story-panel__desc">Compiled data and developed methodologies for regulatory cost-benefit analysis. Delivered 13 research products for federal, state, NGO, and IGO clients across environmental and economic policy domains. Built deep expertise in regulatory economics and quantitative impact assessment working alongside senior economists on EPA, USDA, and international development projects.</p>
+                  <div class="story-panel__tags">
+                    <span class="tag">Regulatory Economics</span>
+                    <span class="tag">Cost-Benefit Analysis</span>
+                    <span class="tag">Federal Clients</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4 · Fulbright -->
+              <div class="story-panel" data-stop="4" data-type="experience">
+                <div class="story-panel__map" style="--accent:var(--color-gold);">
+                  <p class="story-panel__map-region">Central Asia</p>
+                  <p class="story-panel__map-place">Naryn,<br>Kyrgyzstan</p>
+                  <p class="story-panel__map-coord">41°25′N &nbsp; 76°00′E</p>
+                  <p class="story-panel__map-year">2023</p>
+                  <div class="story-panel__map-dot"></div>
+                </div>
+                <div class="story-panel__content">
+                  <p class="story-panel__dates story-panel__dates--exp">2023 – 2024</p>
+                  <h2 class="story-panel__role">Fulbright English Teaching Assistant</h2>
+                  <p class="story-panel__org">U.S. Department of State</p>
+                  <p class="story-panel__desc">Taught English classes and conversation clubs at a university in Naryn, Kyrgyzstan — one of the country&rsquo;s most remote provincial capitals in the Tian Shan mountains. Served as a U.S. citizen diplomat through cultural and educational engagement across the country, building cross-cultural communication skills and deep area knowledge of Central Asia.</p>
+                  <div class="story-panel__tags">
+                    <span class="tag">Fulbright Program</span>
+                    <span class="tag">Public Diplomacy</span>
+                    <span class="tag">Central Asia</span>
+                    <span class="tag">Russian Language</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5 · Congress -->
+              <div class="story-panel" data-stop="5" data-type="experience">
+                <div class="story-panel__map" style="--accent:var(--color-gold);">
+                  <p class="story-panel__map-region">North America</p>
+                  <p class="story-panel__map-place">Washington,<br>D.C.</p>
+                  <p class="story-panel__map-coord">38°53′N &nbsp; 77°02′W</p>
+                  <p class="story-panel__map-year">2024</p>
+                  <div class="story-panel__map-dot"></div>
+                </div>
+                <div class="story-panel__content">
+                  <p class="story-panel__dates story-panel__dates--exp">May – Aug 2024</p>
+                  <h2 class="story-panel__role">Congressional Fellow</h2>
+                  <p class="story-panel__org">Office of Rep. Paul D. Tonko &mdash; U.S. House of Representatives</p>
+                  <p class="story-panel__desc">Coordinated with 50 congressional offices to secure bill cosponsors on energy and environment legislation. Composed 45 constituent position letters addressing key issues in energy policy, foreign affairs, and environmental regulation. Developed skills in legislative process, multi-stakeholder engagement, and rapid policy communication under real legislative deadlines.</p>
+                  <div class="story-panel__tags">
+                    <span class="tag">Legislative Affairs</span>
+                    <span class="tag">Energy Policy</span>
+                    <span class="tag">Constituent Relations</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6 · Embassy Ashgabat -->
+              <div class="story-panel" data-stop="6" data-type="experience">
+                <div class="story-panel__map" style="--accent:var(--color-gold);">
+                  <p class="story-panel__map-region">Central Asia</p>
+                  <p class="story-panel__map-place">Ashgabat,<br>Turkmenistan</p>
+                  <p class="story-panel__map-coord">37°57′N &nbsp; 58°19′E</p>
+                  <p class="story-panel__map-year">2025</p>
+                  <div class="story-panel__map-dot"></div>
+                </div>
+                <div class="story-panel__content">
+                  <p class="story-panel__dates story-panel__dates--exp">Jun – Aug 2025</p>
+                  <h2 class="story-panel__role">Fellow — Political-Economic Section</h2>
+                  <p class="story-panel__org">U.S. Embassy Ashgabat &mdash; U.S. Department of State</p>
+                  <p class="story-panel__desc">Drafted policy memos, analytical reports, and a comprehensive country assessment for a Deputy Assistant Secretary. Reported on economic issues including investment conditions, energy sector dynamics, and regional trends affecting U.S. interests in Turkmenistan and Central Asia. Operated within the full-spectrum environment of a U.S. diplomatic mission.</p>
+                  <div class="story-panel__tags">
+                    <span class="tag">Diplomatic Mission</span>
+                    <span class="tag">Political-Economic Reporting</span>
+                    <span class="tag">Turkmenistan</span>
+                    <span class="tag">Central Asia</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 7 · SAIS / Rangel -->
+              <div class="story-panel" data-stop="7" data-type="education">
+                <div class="story-panel__map" style="--accent:var(--color-green);">
+                  <p class="story-panel__map-region">North America</p>
+                  <p class="story-panel__map-place">Washington,<br>D.C.</p>
+                  <p class="story-panel__map-coord">38°53′N &nbsp; 77°02′W</p>
+                  <p class="story-panel__map-year">2024</p>
+                  <div class="story-panel__map-dot"></div>
+                </div>
+                <div class="story-panel__content">
+                  <p class="story-panel__dates story-panel__dates--edu">2024 – 2026</p>
+                  <h2 class="story-panel__role">Rangel Fellow &mdash; M.A. International Relations</h2>
+                  <p class="story-panel__org">Johns Hopkins SAIS &mdash; World Bank Territorial Development Program</p>
+                  <p class="story-panel__desc">Charles B. Rangel International Affairs Fellow pursuing an M.A. focusing on International Economics &amp; Finance. Research Contributor to the SAIS–World Bank Territorial Development Program, developing evidence-based policy recommendations on soft infrastructure modernization across Central Asia and the South Caucasus for presentation to World Bank stakeholders.</p>
+                  <div class="story-panel__tags">
+                    <span class="tag">Rangel Fellowship</span>
+                    <span class="tag">World Bank</span>
+                    <span class="tag">International Economics</span>
+                    <span class="tag">GPA 3.59</span>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /story-track -->
+          </div><!-- /story-track-outer -->
+
+        </div><!-- /story-sticky -->
+      </div><!-- /story-scroll-outer -->
+
+    </section>
+
+    <!-- Skills -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="overline">Skills</p>
+          <h2>Technical Proficiencies</h2>
+        </div>
+
+        <div class="skills-layout fade-in">
+          <div>
+            <p class="skills-radar__title">Competency Profile</p>
+            <canvas id="skillsRadar" width="300" height="280" aria-label="Radar chart showing competency levels across six dimensions: GIS, Data Analysis, Visualization, Policy Research, Languages, and Diplomacy"></canvas>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-category">
+              <p class="skill-category__label">Geospatial &amp; Mapping</p>
+              <div class="skill-category__tags">
+                <span class="tag">QGIS</span>
+                <span class="tag">ArcGIS Pro</span>
+                <span class="tag">DEM Analysis</span>
+                <span class="tag">Choropleth Mapping</span>
+                <span class="tag">Spatial Joins</span>
+                <span class="tag">Raster Processing</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <p class="skill-category__label">Data Analysis</p>
+              <div class="skill-category__tags">
+                <span class="tag">R</span>
+                <span class="tag">Python</span>
+                <span class="tag">Excel</span>
+                <span class="tag">Statistical Analysis</span>
+                <span class="tag">Regression Modeling</span>
+                <span class="tag">Cost-Benefit Analysis</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <p class="skill-category__label">Visualization &amp; Reporting</p>
+              <div class="skill-category__tags">
+                <span class="tag">Tableau</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">PowerPoint</span>
+                <span class="tag">Dashboard Design</span>
+                <span class="tag">Data Storytelling</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <p class="skill-category__label">Policy Research</p>
+              <div class="skill-category__tags">
+                <span class="tag">Policy Memo Writing</span>
+                <span class="tag">Economic Analysis</span>
+                <span class="tag">Trade Facilitation</span>
+                <span class="tag">Qualitative Research</span>
+                <span class="tag">Country Risk Assessment</span>
+              </div>
+            </div>
+            <div class="skill-category" style="grid-column: 1 / -1;">
+              <p class="skill-category__label">Languages</p>
+              <div class="skill-category__tags">
+                <span class="tag">English <span class="tag__level">Native</span></span>
+                <span class="tag">Russian <span class="tag__level">Intermediate-High</span></span>
+                <span class="tag">Spanish <span class="tag__level">Intermediate</span></span>
+                <span class="tag">Kyrgyz <span class="tag__level">Novice</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="overline">Portfolio</p>
+          <h2>Featured Projects</h2>
+        </div>
+        <div class="project-scroll-wrapper">
+          <div class="project-scroll fade-in">
+
+            <a href="projects/hcmc-sea-level-rise.html" class="project-card" style="text-decoration:none;color:inherit;">
+              <div class="project-card__preview">
+                <img src="assets/images/projects/hcmc-slr.png" alt="HCMC Sea Level Rise Analysis">
+                <span class="project-card__badge badge--arcgis">GIS</span>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">HCMC Sea Level Rise Analysis</h3>
+                <p class="project-card__desc">Geospatial risk analysis of sea level rise impact on Ho Chi Minh City using DEM data and population projections.</p>
+                <div class="project-card__tags">
+                  <span class="tag">Climate Risk</span>
+                  <span class="tag">DEM</span>
+                </div>
+                <span class="project-card__link">View Project &rarr;</span>
+              </div>
+            </a>
+
+            <a href="projects/latam-violence-dashboard.html" class="project-card" style="text-decoration:none;color:inherit;">
+              <div class="project-card__preview">
+                <img src="assets/images/projects/latam-violence-dashboard.png" alt="Latin America Armed Conflict Dashboard">
+                <span class="project-card__badge badge--powerbi">Power BI</span>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Latin America Armed Conflict Dashboard</h3>
+                <p class="project-card__desc">Interactive dashboard tracking 146K conflict events and 130K fatalities across 17 countries from 2019–2024.</p>
+                <div class="project-card__tags">
+                  <span class="tag">Conflict Analysis</span>
+                  <span class="tag">Latin America</span>
+                </div>
+                <span class="project-card__link">View Dashboard &rarr;</span>
+              </div>
+            </a>
+
+            <a href="projects/central-eurasia-practicum.html" class="project-card" style="text-decoration:none;color:inherit;">
+              <div class="project-card__preview">
+                <img src="assets/images/projects/central-eurasia-practicum.png" alt="Central Eurasia Practicum">
+                <span class="project-card__badge badge--policy">Policy</span>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">From Transit to Transformation: Central Asia</h3>
+                <p class="project-card__desc">Policy presentation to the World Bank Territorial Development Team on trade corridor soft infrastructure across seven CASC countries.</p>
+                <div class="project-card__tags">
+                  <span class="tag">Trade Facilitation</span>
+                  <span class="tag">Central Asia</span>
+                </div>
+                <span class="project-card__link">View Project &rarr;</span>
+              </div>
+            </a>
+
+            <a href="projects/brazil-1999-crisis.html" class="project-card" style="text-decoration:none;color:inherit;">
+              <div class="project-card__preview">
+                <img src="assets/images/projects/brazil-1999.png" alt="Brazil 1999 Currency Crisis">
+                <span class="project-card__badge badge--finance">Finance</span>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Brazil 1999: The Samba Effect</h3>
+                <p class="project-card__desc">Case study of Brazil's 1999 currency crisis — from crawling-peg collapse to the macroeconomic tripod and V-shaped recovery.</p>
+                <div class="project-card__tags">
+                  <span class="tag">Currency Crisis</span>
+                  <span class="tag">Emerging Markets</span>
+                </div>
+                <span class="project-card__link">View Project &rarr;</span>
+              </div>
+            </a>
+
+            <a href="projects/nyc-population-density.html" class="project-card" style="text-decoration:none;color:inherit;">
+              <div class="project-card__preview">
+                <img src="assets/images/projects/nyc-density.png" alt="NYC Population Density">
+                <span class="project-card__badge badge--arcgis">GIS</span>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">NYC Population Density (2010)</h3>
+                <p class="project-card__desc">Choropleth map of 2010 Census population density across NYC's Neighborhood Tabulation Areas.</p>
+                <div class="project-card__tags">
+                  <span class="tag">Choropleth</span>
+                  <span class="tag">Urban</span>
+                </div>
+                <span class="project-card__link">View Project &rarr;</span>
+              </div>
+            </a>
+
+            <a href="projects/lubumbashi-urban-economics.html" class="project-card" style="text-decoration:none;color:inherit;">
+              <div class="project-card__preview">
+                <img src="assets/images/projects/lubumbashi.png" alt="Lubumbashi Urban Economics">
+                <span class="project-card__badge badge--urban">Urban</span>
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Lubumbashi: Mining Rents &amp; Urban Form</h3>
+                <p class="project-card__desc">Case study examining how copper mining rents shape the spatial structure and labor markets of a resource-dependent city in the DRC.</p>
+                <div class="project-card__tags">
+                  <span class="tag">Urban Economics</span>
+                  <span class="tag">Sub-Saharan Africa</span>
+                </div>
+                <span class="project-card__link">View Project &rarr;</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+        <div class="view-all fade-in">
+          <a href="portfolio.html">View all projects &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credentials -->
+    <section class="section section--alt" id="certifications">
+      <div class="container">
+        <div class="section__header fade-in">
+          <p class="overline">Credentials</p>
+          <h2>Fellowships &amp; Honors</h2>
+        </div>
+        <div class="cert-grid">
+
+          <div class="cert-card fade-in"
+               data-cred-type="image"
+               data-cred-src="assets/images/certificates/rangel.png"
+               data-cred-name="2023 Charles B. Rangel International Affairs Fellowship"
+               data-cred-org="U.S. Department of State">
+            <div class="cert-card__preview">
+              <img src="assets/images/certificates/rangel.png" alt="Rangel Fellowship">
+            </div>
+            <h4 class="cert-card__name">2023 Charles B. Rangel International Affairs Fellowship</h4>
+            <p class="cert-card__org">U.S. Department of State</p>
+            <span class="cert-card__hint">View certificate &rarr;</span>
+          </div>
+
+          <div class="cert-card fade-in"
+               data-cred-type="image"
+               data-cred-src="assets/images/certificates/fulbright.png"
+               data-cred-name="2023–2024 Fulbright U.S. Student Program"
+               data-cred-org="U.S. Department of State">
+            <div class="cert-card__preview">
+              <img src="assets/images/certificates/fulbright.png" alt="Fulbright Certificate">
+            </div>
+            <h4 class="cert-card__name">2023–2024 Fulbright U.S. Student Program</h4>
+            <p class="cert-card__org">U.S. Department of State</p>
+            <span class="cert-card__hint">View certificate &rarr;</span>
+          </div>
+
+          <div class="cert-card fade-in"
+               data-cred-type="image"
+               data-cred-src="assets/images/certificates/cls.png"
+               data-cred-name="2021–2022 Critical Language Scholarship (Russian)"
+               data-cred-org="U.S. Department of State">
+            <div class="cert-card__preview">
+              <img src="assets/images/certificates/cls.png" alt="CLS Certificate">
+            </div>
+            <h4 class="cert-card__name">2021–2022 Critical Language Scholarship (Russian)</h4>
+            <p class="cert-card__org">U.S. Department of State</p>
+            <span class="cert-card__hint">View certificate &rarr;</span>
+          </div>
+
+          <div class="cert-card fade-in"
+               data-cred-type="badge"
+               data-cred-src="assets/images/certificates/sigma-iota-rho.png"
+               data-cred-name="2021 Sigma Iota Rho International Honor Society"
+               data-cred-org="SUNY Geneseo"
+               data-cred-member="Inducted 2021 · SUNY Geneseo Chapter"
+               data-cred-desc="Sigma Iota Rho (SIR) is the national honor society for international studies, dedicated to promoting and rewarding scholarship, service, and integrity among students and practitioners in international affairs. Founded at American University in 1984, SIR has chapters at over 170 colleges and universities across the United States. Members are recognized for exceptional academic performance in international studies, political science, and related disciplines, and for demonstrated commitment to the values of international scholarship and cross-cultural understanding.">
+            <div class="cert-card__preview">
+              <img src="assets/images/certificates/sigma-iota-rho.png" alt="Sigma Iota Rho Crest">
+            </div>
+            <h4 class="cert-card__name">2021 Sigma Iota Rho International Honor Society</h4>
+            <p class="cert-card__org">SUNY Geneseo</p>
+            <span class="cert-card__hint">Learn more &rarr;</span>
+          </div>
+
+          <div class="cert-card fade-in"
+               data-cred-type="badge"
+               data-cred-src="assets/images/certificates/akpsi.png"
+               data-cred-name="2018 Alpha Kappa Psi Professional Business Fraternity"
+               data-cred-org="SUNY Geneseo"
+               data-cred-member="Inducted 2018 · Chapter Vice President · SUNY Geneseo Chapter"
+               data-cred-desc="Alpha Kappa Psi (AKPsi) is the oldest and largest professional business fraternity in the United States, founded in 1904 at New York University. AKPsi develops principled business leaders through professional development, leadership training, and community service. A co-educational professional fraternity welcoming students from all academic majors, AKPsi has over 250 active chapters and more than 300,000 lifetime members. Members are united by a commitment to ethical business practice and lifelong professional growth.">
+            <div class="cert-card__preview">
+              <img src="assets/images/certificates/akpsi.png" alt="Alpha Kappa Psi Coat of Arms">
+            </div>
+            <h4 class="cert-card__name">2018 Alpha Kappa Psi Professional Business Fraternity</h4>
+            <p class="cert-card__org">SUNY Geneseo &middot; Chapter Vice President</p>
+            <span class="cert-card__hint">Learn more &rarr;</span>
+          </div>
+
+          <div class="cert-card fade-in"
+               data-cred-type="badge"
+               data-cred-src="assets/images/certificates/phi-theta-kappa.png"
+               data-cred-name="2016 Phi Theta Kappa Honor Society"
+               data-cred-org="SUNY Jefferson Community College"
+               data-cred-member="Inducted 2016 · Chapter President · SUNY Jefferson Community College"
+               data-cred-desc="Phi Theta Kappa (PTK) is the international honor society of two-year colleges, founded in 1918. The world's largest honor society with more than 3.8 million members inducted into 1,300 chapters across the United States and internationally, PTK recognizes and encourages scholarship among community college students. Membership is limited to students who have completed at least 12 credit hours and maintain a cumulative GPA of 3.5 or higher. As Chapter President, Abdul led the Jefferson Community College chapter in academic and community service initiatives.">
+            <div class="cert-card__preview">
+              <img src="assets/images/certificates/phi-theta-kappa.png" alt="Phi Theta Kappa">
+            </div>
+            <h4 class="cert-card__name">2016 Phi Theta Kappa Honor Society</h4>
+            <p class="cert-card__org">SUNY Jefferson Community College &middot; Chapter President</p>
+            <span class="cert-card__hint">Learn more &rarr;</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer class="footer" id="contact">
+      <h2 class="footer__heading">Get in Touch</h2>
+
+      <div data-fs-success class="contact-form__success">
+        <p>Message sent — I'll get back to you soon.</p>
+      </div>
+      <div data-fs-error class="contact-form__error-banner"></div>
+
+      <form id="contact-form" class="contact-form">
+        <div class="contact-form__row">
+          <div class="contact-form__group">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="Your name" data-fs-field required>
+            <span data-fs-error="name" class="contact-form__field-error"></span>
+          </div>
+          <div class="contact-form__group">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" placeholder="your@email.com" data-fs-field required>
+            <span data-fs-error="email" class="contact-form__field-error"></span>
+          </div>
+        </div>
+        <div class="contact-form__group">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" placeholder="What would you like to say?" data-fs-field required></textarea>
+          <span data-fs-error="message" class="contact-form__field-error"></span>
+        </div>
+        <button type="submit" class="btn btn--outline" data-fs-submit-btn>Send Message</button>
+      </form>
+
+      <div class="contact-form__divider">or reach me directly</div>
+
+      <div class="footer__contact">
+        <div class="footer__contact-group">
+          <p class="footer__contact-label">Email</p>
+          <a href="mailto:aymsanderson@gmail.com">aymsanderson@gmail.com</a>
+        </div>
+        <div class="footer__contact-group">
+          <p class="footer__contact-label">Connect</p>
+          <a href="https://www.linkedin.com/in/abdulsanderson" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <p class="footer__copy">&copy; 2026 Abdul Sanderson. All rights reserved.</p>
+    </footer>
+
+  </main><!-- /main-content -->
+
+  <!-- Credential Lightbox -->
+  <div class="cred-lightbox" id="credLightbox" role="dialog" aria-modal="true" aria-label="Credential detail">
+    <div class="cred-lightbox__inner" id="credLightboxInner">
+      <button class="cred-lightbox__close" id="credLightboxClose" aria-label="Close">&times;</button>
+    </div>
   </div>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
-      <div class="hero__content fade-in">
-        <h1 class="hero__name">Abdul Sanderson</h1>
-        <p class="hero__title">Data Analyst | Policy Professional</p>
-        <p class="hero__intro">
-          Rangel Fellow and Johns Hopkins University School of Advanced International Studies (SAIS) graduate with expertise in
-          international economics, data analytics, and diplomatic engagement.
-          Fulbright alumnus with experience across Central Asia, Capitol Hill,
-          and U.S. embassies. Fluent in Russian and Spanish.
-        </p>
-        <div class="hero__buttons">
-          <a href="portfolio.html" class="btn btn--primary">View Portfolio</a>
-          <a href="assets/docs/resume.pdf" class="btn btn--outline" target="_blank">Download CV</a>
-        </div>
-      </div>
-      <img src="assets/images/headshot.jpg" alt="Abdul Sanderson" class="hero__photo fade-in" fetchpriority="high">
-    </div>
-  </section>
-
-  <!-- About -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section__header fade-in">
-        <p class="overline">About</p>
-        <h2>Background</h2>
-      </div>
-      <p class="fade-in" style="max-width: 680px; line-height: 1.8; color: var(--color-text);">
-        Abdul Sanderson is a Charles B. Rangel International Affairs Fellow
-        pursuing a Master of Arts in International Relations at the Johns Hopkins
-        School of Advanced International Studies (SAIS), focusing on International
-        Economics and Finance with a regional concentration on the Americas and
-        Europe &amp; Eurasia. He holds a B.A. in Economics and International Relations
-        from SUNY Geneseo, graduating cum laude.
-      </p>
-      <p class="fade-in" style="max-width: 680px; line-height: 1.8; color: var(--color-text); margin-top: 1rem;">
-        His career spans economic analysis, diplomacy, and education; from
-        drafting policy memos at the U.S. Embassy in Ashgabat, Turkmenistan, to
-        serving as a Fulbright English Teaching Assistant in Kyrgyzstan, to
-        conducting regulatory cost analysis at Industrial Economics, Inc.
-        He brings skills in GIS, Tableau, Excel, R, and four languages
-        (English, Russian, Spanish, Kyrgyz) to his work in economic diplomacy and
-        international development.
-      </p>
-    </div>
-  </section>
-
-  <!-- Education & Languages -->
-  <section class="section section--alt" id="education">
-    <div class="container">
-      <div class="section__header fade-in">
-        <p class="overline">Education</p>
-        <h2>Academic Background</h2>
-      </div>
-    </div>
-    <div class="education-grid-wrapper">
-      <div class="education-grid">
-        <div class="education-card fade-in">
-          <div class="education-card__header">
-            <div class="education-card__meta">
-              <h4 class="education-card__degree">M.A. International Relations</h4>
-              <p class="education-card__school">Johns Hopkins SAIS</p>
-              <p class="education-card__date">Washington, DC<br>May 2026</p>
-            </div>
-            <img src="assets/images/sais-crest.png" alt="Johns Hopkins SAIS" class="education-card__crest education-card__crest--lg">
-          </div>
-          <p class="education-card__details">GPA: 3.59 &middot; Focus: International Economics &amp; Finance &middot; Americas, Europe &amp; Eurasia</p>
-          <div class="education-card__coursework">
-            <p class="education-card__coursework-label">Coursework</p>
-            <div class="education-card__courses">
-              <span class="tag">Corporate Finance</span>
-              <span class="tag">Urban Economics</span>
-              <span class="tag">International Investment Law</span>
-              <span class="tag">Sanctions &amp; Their Effects</span>
-              <span class="tag">GIS: Energy &amp; Environment</span>
-            </div>
-          </div>
-        </div>
-        <div class="education-card fade-in">
-          <div class="education-card__header">
-            <div class="education-card__meta">
-              <h4 class="education-card__degree">B.A. Economics &amp; International Relations</h4>
-              <p class="education-card__school">SUNY Geneseo</p>
-              <p class="education-card__date">Geneseo, NY<br>May 2020<br>Cum Laude</p>
-            </div>
-            <img src="assets/images/geneseo-crest.png" alt="SUNY Geneseo" class="education-card__crest">
-          </div>
-          <p class="education-card__details">GPA: 3.56 &middot; Dean's List &middot; Sigma Iota Rho Honor Society<br>Study Abroad: Universit&eacute; de Fribourg</p>
-          <div class="education-card__coursework">
-            <p class="education-card__coursework-label">Coursework</p>
-            <div class="education-card__courses">
-              <span class="tag">U.S. Foreign Policy</span>
-              <span class="tag">Econometrics</span>
-              <span class="tag">International Trade &amp; Economic Policy</span>
-              <span class="tag">Labor Economics</span>
-              <span class="tag">Money &amp; Financial Intermediation</span>
-            </div>
-          </div>
-        </div>
-        <div class="education-card fade-in">
-          <div class="education-card__header">
-            <div class="education-card__meta">
-              <h4 class="education-card__degree">A.A. Humanities &amp; Social Sciences</h4>
-              <p class="education-card__school">SUNY Jefferson Community College</p>
-              <p class="education-card__date">Watertown, NY<br>May 2017<br>High Honors Graduate</p>
-            </div>
-            <img src="assets/images/jcc-crest.png" alt="SUNY Jefferson Community College" class="education-card__crest">
-          </div>
-          <p class="education-card__details">GPA: 4.0 &middot; President's List &middot; Phi Theta Kappa (Chapter President)</p>
-          <div class="education-card__coursework">
-            <p class="education-card__coursework-label">Coursework</p>
-            <div class="education-card__courses">
-              <span class="tag">World Affairs</span>
-              <span class="tag">Cultural Anthropology</span>
-              <span class="tag">Western Civilization I &amp; II</span>
-              <span class="tag">Environmental Biology</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> <!-- /education-grid-wrapper -->
-  </section>
-
-  <!-- Experience -->
-  <section class="section" id="experience">
-    <div class="container">
-      <div class="section__header fade-in">
-        <p class="overline">Experience</p>
-        <h2>Timeline of Experiences</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline__item fade-in">
-          <div class="timeline__dot"></div>
-          <h4 class="timeline__role">Research Contributor, SAIS&ndash;World Bank Territorial Development Program</h4>
-          <p class="timeline__org">Johns Hopkins SAIS &middot; Jan 2026 &ndash; May 2026</p>
-          <p class="timeline__desc">
-            Developed evidence-based policy recommendations for soft infrastructure
-            modernization in Central Asia and the South Caucasus as part of a
-            World Bank&ndash;SAIS program. Analyzed trade facilitation frameworks
-            across seven countries to identify opportunities for harmonizing customs
-            procedures and regional standards, synthesizing country-specific export
-            potential assessments using composite trade metrics to inform
-            prioritization of development interventions. Delivered findings in
-            presentations and analytical workbooks for stakeholder review.
-          </p>
-        </div>
-        <div class="timeline__item fade-in">
-          <div class="timeline__dot"></div>
-          <h4 class="timeline__role">Fellow, Political-Economic Section</h4>
-          <p class="timeline__org">U.S. Embassy Ashgabat, U.S. Department of State &middot; Jun 2025 &ndash; Aug 2025</p>
-          <p class="timeline__desc">
-            Drafted policy memos, analytical reports, and a comprehensive country
-            assessment for a Deputy Assistant Secretary. Reported on economic issues
-            including investment conditions and regional trends affecting U.S. interests.
-          </p>
-        </div>
-        <div class="timeline__item fade-in">
-          <div class="timeline__dot"></div>
-          <h4 class="timeline__role">Rangel Fellow &mdash; M.A. International Relations</h4>
-          <p class="timeline__org">Johns Hopkins SAIS &middot; 2024 &ndash; 2026</p>
-          <p class="timeline__desc">
-            Charles B. Rangel International Affairs Fellow. Pursuing an M.A. in
-            International Relations with a focus on International Economics &amp;
-            Finance. Coursework includes sanctions, risk analysis, and statistics
-            for data analysis.
-          </p>
-        </div>
-        <div class="timeline__item fade-in">
-          <div class="timeline__dot"></div>
-          <h4 class="timeline__role">Fellow, Office of Congressman Paul D. Tonko</h4>
-          <p class="timeline__org">U.S. House of Representatives &middot; May 2024 &ndash; Aug 2024</p>
-          <p class="timeline__desc">
-            Coordinated with 50 congressional offices to secure bill cosponsors.
-            Composed 45 position letters addressing constituents' key issues.
-          </p>
-        </div>
-        <div class="timeline__item fade-in">
-          <div class="timeline__dot"></div>
-          <h4 class="timeline__role">Fulbright English Teaching Assistant</h4>
-          <p class="timeline__org">Fulbright Kyrgyzstan &middot; Sep 2023 &ndash; May 2024</p>
-          <p class="timeline__desc">
-            Taught English classes and conversation clubs at a university in Naryn.
-            Served as a U.S. citizen diplomat through cultural and educational
-            engagement across Kyrgyzstan.
-          </p>
-        </div>
-        <div class="timeline__item fade-in">
-          <div class="timeline__dot"></div>
-          <h4 class="timeline__role">Research Analyst</h4>
-          <p class="timeline__org">Industrial Economics, Inc. &middot; Sep 2022 &ndash; Aug 2023</p>
-          <p class="timeline__desc">
-            Compiled data and developed methodologies for regulatory cost analysis.
-            Delivered 13 research products for federal, state, NGO, and IGO clients.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section class="section section--alt" id="skills">
-    <div class="container">
-      <div class="section__header fade-in">
-        <p class="overline">Skills</p>
-        <h2>Technical Proficiencies</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-category fade-in">
-          <p class="skill-category__label">Geospatial &amp; Mapping</p>
-          <div class="skill-category__tags">
-            <span class="tag">QGIS</span>
-            <span class="tag">ArcGIS Pro</span>
-            <span class="tag">DEM Analysis</span>
-            <span class="tag">Choropleth Mapping</span>
-            <span class="tag">Spatial Joins</span>
-            <span class="tag">Raster Processing</span>
-          </div>
-        </div>
-        <div class="skill-category fade-in">
-          <p class="skill-category__label">Data Analysis</p>
-          <div class="skill-category__tags">
-            <span class="tag">R</span>
-            <span class="tag">Python</span>
-            <span class="tag">Excel</span>
-            <span class="tag">Statistical Analysis</span>
-            <span class="tag">Regression Modeling</span>
-            <span class="tag">Cost-Benefit Analysis</span>
-          </div>
-        </div>
-        <div class="skill-category fade-in">
-          <p class="skill-category__label">Visualization &amp; Reporting</p>
-          <div class="skill-category__tags">
-            <span class="tag">Tableau</span>
-            <span class="tag">Power BI</span>
-            <span class="tag">PowerPoint</span>
-            <span class="tag">Data Visualization</span>
-            <span class="tag">Dashboard Design</span>
-          </div>
-        </div>
-        <div class="skill-category fade-in">
-          <p class="skill-category__label">Policy Research</p>
-          <div class="skill-category__tags">
-            <span class="tag">Policy Memo Writing</span>
-            <span class="tag">Economic Analysis</span>
-            <span class="tag">Trade Facilitation</span>
-            <span class="tag">Qualitative Research</span>
-            <span class="tag">Country Risk Assessment</span>
-          </div>
-        </div>
-        <div class="skill-category fade-in" style="grid-column: 1 / -1;">
-          <p class="skill-category__label">Languages</p>
-          <div class="skill-category__tags">
-            <span class="tag">English <span class="tag__level">Native</span></span>
-            <span class="tag">Russian <span class="tag__level">Intermediate-High</span></span>
-            <span class="tag">Spanish <span class="tag__level">Intermediate</span></span>
-            <span class="tag">Kyrgyz <span class="tag__level">Novice</span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio Preview -->
-  <section class="section" id="portfolio">
-    <div class="container">
-      <div class="section__header fade-in">
-        <p class="overline">Portfolio</p>
-        <h2>Featured Projects</h2>
-      </div>
-      <div class="project-scroll-wrapper">
-      <div class="project-scroll fade-in">
-        <a href="projects/hcmc-sea-level-rise.html" class="project-card" style="text-decoration:none; color:inherit;">
-          <div class="project-card__preview">
-            <img src="assets/images/projects/hcmc-slr.png" alt="HCMC Sea Level Rise Analysis">
-            <span class="project-card__badge badge--arcgis">GIS</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-card__title">HCMC Sea Level Rise Analysis</h3>
-            <p class="project-card__desc">Geospatial risk analysis of sea level rise impact on Ho Chi Minh City using DEM data and population projections.</p>
-            <div class="project-card__tags">
-              <span class="tag">Climate Risk</span>
-              <span class="tag">DEM</span>
-            </div>
-            <span class="project-card__link">View Project &rarr;</span>
-          </div>
-        </a>
-        <a href="projects/spatial-analysis.html" class="project-card" style="text-decoration:none; color:inherit;">
-          <div class="project-card__preview">
-            <img src="assets/images/projects/spatial-analysis.png" alt="Census & Building Spatial Analysis">
-            <span class="project-card__badge badge--arcgis">GIS</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-card__title">Census &amp; Building Spatial Analysis</h3>
-            <p class="project-card__desc">Comparative spatial analysis of census demographics and building infrastructure between 2020 and 2100.</p>
-            <div class="project-card__tags">
-              <span class="tag">Spatial Joins</span>
-              <span class="tag">Census</span>
-            </div>
-            <span class="project-card__link">View Project &rarr;</span>
-          </div>
-        </a>
-        <a href="projects/manhattan-database.html" class="project-card" style="text-decoration:none; color:inherit;">
-          <div class="project-card__preview">
-            <img src="assets/images/projects/manhattan-database.png" alt="Manhattan Building Database">
-            <span class="project-card__badge badge--arcgis">GIS</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-card__title">Manhattan Building Database</h3>
-            <p class="project-card__desc">Geospatial database analysis of Manhattan building footprints and boundaries using QGIS.</p>
-            <div class="project-card__tags">
-              <span class="tag">Database</span>
-              <span class="tag">Urban</span>
-            </div>
-            <span class="project-card__link">View Project &rarr;</span>
-          </div>
-        </a>
-        <a href="projects/nyc-population-density.html" class="project-card" style="text-decoration:none; color:inherit;">
-          <div class="project-card__preview">
-            <img src="assets/images/projects/nyc-density.png" alt="NYC Population Density by Neighborhood (2010)">
-            <span class="project-card__badge badge--arcgis">GIS</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-card__title">NYC Population Density by Neighborhood (2010)</h3>
-            <p class="project-card__desc">Choropleth map of 2010 Census population density across NYC's Neighborhood Tabulation Areas, revealing sharp borough-level contrasts.</p>
-            <div class="project-card__tags">
-              <span class="tag">Choropleth</span>
-              <span class="tag">Census</span>
-              <span class="tag">Urban</span>
-            </div>
-            <span class="project-card__link">View Project &rarr;</span>
-          </div>
-        </a>
-        <a href="projects/lubumbashi-urban-economics.html" class="project-card" style="text-decoration:none; color:inherit;">
-          <div class="project-card__preview">
-            <img src="assets/images/projects/lubumbashi.png" alt="Lubumbashi Urban Economics Case Study">
-            <span class="project-card__badge badge--urban">Urban</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-card__title">Lubumbashi: Mining Rents &amp; Urban Form</h3>
-            <p class="project-card__desc">Case study examining how copper mining rents shape the spatial structure, labor markets, and built environment of a resource-dependent city in the DRC.</p>
-            <div class="project-card__tags">
-              <span class="tag">Consumption City</span>
-              <span class="tag">Urban Economics</span>
-              <span class="tag">Sub-Saharan Africa</span>
-              <span class="tag">PowerPoint</span>
-            </div>
-            <span class="project-card__link">View Project &rarr;</span>
-          </div>
-        </a>
-        <a href="projects/brazil-1999-crisis.html" class="project-card" style="text-decoration:none; color:inherit;">
-          <div class="project-card__preview">
-            <img src="assets/images/projects/brazil-1999.png" alt="Brazil 1999 Currency Crisis — The Samba Effect">
-            <span class="project-card__badge badge--finance">Finance</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-card__title">Brazil 1999: The Samba Effect</h3>
-            <p class="project-card__desc">Case study of Brazil's 1999 currency crisis — from crawling-peg collapse and ~50% real depreciation to the macroeconomic tripod and V-shaped recovery.</p>
-            <div class="project-card__tags">
-              <span class="tag">Currency Crisis</span>
-              <span class="tag">Emerging Markets</span>
-              <span class="tag">Latin America</span>
-              <span class="tag">PowerPoint</span>
-            </div>
-            <span class="project-card__link">View Project &rarr;</span>
-          </div>
-        </a>
-        <a href="projects/central-eurasia-practicum.html" class="project-card" style="text-decoration:none; color:inherit;">
-          <div class="project-card__preview">
-            <img src="assets/images/projects/central-eurasia-practicum.png" alt="Central Eurasia Practicum: From Transit to Transformation">
-            <span class="project-card__badge badge--policy">Policy</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-card__title">From Transit to Transformation: Central Asia &amp; South Caucasus</h3>
-            <p class="project-card__desc">Policy presentation to the World Bank Territorial Development Team on trade corridor soft infrastructure and structural transformation across seven CASC countries.</p>
-            <div class="project-card__tags">
-              <span class="tag">Trade Facilitation</span>
-              <span class="tag">Central Asia</span>
-              <span class="tag">PowerPoint</span>
-            </div>
-            <span class="project-card__link">View Project &rarr;</span>
-          </div>
-        </a>
-        <a href="projects/latam-violence-dashboard.html" class="project-card" style="text-decoration:none; color:inherit;">
-          <div class="project-card__preview">
-            <img src="assets/images/projects/latam-violence-dashboard.png" alt="Latin America Armed Conflict &amp; Cartel Violence Dashboard">
-            <span class="project-card__badge badge--powerbi">Power BI</span>
-          </div>
-          <div class="project-card__body">
-            <h3 class="project-card__title">Latin America Armed Conflict &amp; Cartel Violence Dashboard</h3>
-            <p class="project-card__desc">Interactive dashboard tracking 146K conflict events and 130K fatalities across 17 Latin American countries from 2019 to 2024.</p>
-            <div class="project-card__tags">
-              <span class="tag">Conflict Analysis</span>
-              <span class="tag">Latin America</span>
-              <span class="tag">Power BI</span>
-            </div>
-            <span class="project-card__link">View Dashboard &rarr;</span>
-          </div>
-        </a>
-      </div>
-      </div> <!-- /project-scroll-wrapper -->
-      <div class="view-all fade-in">
-        <a href="portfolio.html">View all projects &rarr;</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Certifications -->
-  <section class="section section--alt" id="certifications">
-    <div class="container">
-      <div class="section__header fade-in">
-        <p class="overline">Certifications</p>
-        <h2>Credentials</h2>
-      </div>
-      <div class="cert-grid">
-        <a href="assets/images/certificates/rangel.png" class="cert-card cert-card--has-image fade-in" target="_blank" rel="noopener" aria-label="View Rangel Fellowship press release (opens in new tab)">
-          <div class="cert-card__preview">
-            <img src="assets/images/certificates/rangel.png" alt="Rangel Fellowship Press Release">
-          </div>
-          <h4 class="cert-card__name">2023 Charles B. Rangel International Affairs Fellowship</h4>
-          <p class="cert-card__org">U.S. Department of State</p>
-        </a>
-        <a href="assets/images/certificates/fulbright.png" class="cert-card cert-card--has-image fade-in" target="_blank" rel="noopener" aria-label="View Fulbright certificate (opens in new tab)">
-          <div class="cert-card__preview">
-            <img src="assets/images/certificates/fulbright.png" alt="Fulbright Certificate of Achievement">
-          </div>
-          <h4 class="cert-card__name">2023–2024 Fulbright U.S. Student Program</h4>
-          <p class="cert-card__org">U.S. Department of State</p>
-        </a>
-        <a href="assets/images/certificates/cls.png" class="cert-card cert-card--has-image fade-in" target="_blank" rel="noopener" aria-label="View Critical Language Scholarship certificate (opens in new tab)">
-          <div class="cert-card__preview">
-            <img src="assets/images/certificates/cls.png" alt="CLS Certificate of Achievement">
-          </div>
-          <h4 class="cert-card__name">2021–2022 Critical Language Scholarship (Russian)</h4>
-          <p class="cert-card__org">U.S. Department of State</p>
-        </a>
-        <div class="cert-card cert-card--has-image fade-in" role="figure" aria-label="Alpha Kappa Psi coat of arms — membership, SUNY Geneseo, 2018">
-          <div class="cert-card__preview">
-            <img src="assets/images/certificates/akpsi.png" alt="Alpha Kappa Psi Coat of Arms">
-          </div>
-          <h4 class="cert-card__name">2018 Alpha Kappa Psi Professional<br>Co-ed Business Fraternity</h4>
-          <p class="cert-card__org">SUNY Geneseo</p>
-        </div>
-        <div class="cert-card cert-card--has-image fade-in" role="figure" aria-label="Sigma Iota Rho crest — membership, SUNY Geneseo, 2021">
-          <div class="cert-card__preview">
-            <img src="assets/images/certificates/sigma-iota-rho.png" alt="Sigma Iota Rho Crest">
-          </div>
-          <h4 class="cert-card__name">2021 Sigma Iota Rho International Honor Society</h4>
-          <p class="cert-card__org">SUNY Geneseo</p>
-        </div>
-        <a href="assets/images/certificates/ptk.png" class="cert-card cert-card--has-image fade-in" target="_blank" rel="noopener" aria-label="View Phi Theta Kappa membership certificate (opens in new tab)">
-          <div class="cert-card__preview">
-            <img src="assets/images/certificates/ptk.png" alt="Phi Theta Kappa Membership Certificate">
-          </div>
-          <h4 class="cert-card__name">2016 Phi Theta Kappa Honor Society</h4>
-          <p class="cert-card__org">SUNY Jefferson Community College</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact / Footer -->
-  <footer class="footer" id="contact">
-    <h2 class="footer__heading">Get in Touch</h2>
-
-    <!-- Success message — shown by Formspree AJAX library after submission -->
-    <div data-fs-success class="contact-form__success">
-      <p>Message sent — I'll get back to you soon.</p>
-    </div>
-
-    <!-- Form-level error banner -->
-    <div data-fs-error class="contact-form__error-banner"></div>
-
-    <form id="contact-form" class="contact-form">
-      <div class="contact-form__row">
-        <div class="contact-form__group">
-          <label for="contact-name">Name</label>
-          <input type="text" id="contact-name" name="name" placeholder="Your name" data-fs-field required>
-          <span data-fs-error="name" class="contact-form__field-error"></span>
-        </div>
-        <div class="contact-form__group">
-          <label for="contact-email">Email</label>
-          <input type="email" id="contact-email" name="email" placeholder="your@email.com" data-fs-field required>
-          <span data-fs-error="email" class="contact-form__field-error"></span>
-        </div>
-      </div>
-      <div class="contact-form__group">
-        <label for="contact-message">Message</label>
-        <textarea id="contact-message" name="message" placeholder="What would you like to say?" data-fs-field required></textarea>
-        <span data-fs-error="message" class="contact-form__field-error"></span>
-      </div>
-      <button type="submit" class="btn btn--outline" data-fs-submit-btn>Send Message</button>
-    </form>
-
-    <div class="contact-form__divider">or reach me directly</div>
-
-    <div class="footer__contact">
-      <div class="footer__contact-group">
-        <p class="footer__contact-label">Email</p>
-        <a href="mailto:aymsanderson@gmail.com">aymsanderson@gmail.com</a>
-      </div>
-      <div class="footer__contact-group">
-        <p class="footer__contact-label">Connect</p>
-        <a href="https://www.linkedin.com/in/abdulsanderson" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-    <p class="footer__copy">&copy; 2026 Abdul Sanderson. All rights reserved.</p>
-  </footer>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
   <script src="js/main.js"></script>
   <script>
     window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
