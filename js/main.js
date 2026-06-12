@@ -210,17 +210,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ── Story Map Timeline ──
   (function initStoryMap() {
-    var outer   = document.getElementById(‘storyScrollOuter’);
-    var track   = document.getElementById(‘storyTrack’);
-    var fillEl  = document.getElementById(‘storyTrailFill’);
-    var dotsEl  = document.getElementById(‘storyTrailDots’);
-    var counterEl = document.getElementById(‘storyCounter’);
+    var outer   = document.getElementById('storyScrollOuter');
+    var track   = document.getElementById('storyTrack');
+    var fillEl  = document.getElementById('storyTrailFill');
+    var dotsEl  = document.getElementById('storyTrailDots');
+    var counterEl = document.getElementById('storyCounter');
 
     if (!outer || !track) return;
 
-    var panels   = track.querySelectorAll(‘.story-panel’);
+    var panels   = track.querySelectorAll('.story-panel');
     var numPanels = panels.length;
-    var dots     = dotsEl ? dotsEl.querySelectorAll(‘.story-dot’) : [];
+    var dots     = dotsEl ? dotsEl.querySelectorAll('.story-dot') : [];
     var isMobile = window.innerWidth <= 768;
 
     function getPanelWidth() {
@@ -231,15 +231,15 @@ document.addEventListener('DOMContentLoaded', function () {
     function setContainerHeight() {
       isMobile = window.innerWidth <= 768;
       if (isMobile) {
-        outer.style.height = ‘’;
+        outer.style.height = '';
         return;
       }
       var vh = window.innerHeight;
-      outer.style.height = ((numPanels - 1) * 0.75 * vh + vh) + ‘px’;
+      outer.style.height = ((numPanels - 1) * 0.75 * vh + vh) + 'px';
     }
 
     setContainerHeight();
-    window.addEventListener(‘resize’, setContainerHeight);
+    window.addEventListener('resize', setContainerHeight);
 
     var currentX = 0;
     var targetX  = 0;
@@ -250,17 +250,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateChrome(idx) {
       var progress = numPanels > 1 ? idx / (numPanels - 1) : 0;
-      if (fillEl)    fillEl.style.width = (progress * 100) + ‘%’;
+      if (fillEl)    fillEl.style.width = (progress * 100) + '%';
       if (counterEl) counterEl.textContent = idx + 1;
       dots.forEach(function (d, i) {
-        d.classList.toggle(‘active’, i === idx);
+        d.classList.toggle('active', i === idx);
       });
     }
 
     function tick() {
       currentX = lerp(currentX, targetX, 0.1);
       if (Math.abs(currentX - targetX) < 0.5) { currentX = targetX; rafId = null; }
-      track.style.transform = ‘translateX(‘ + currentX + ‘px)’;
+      track.style.transform = 'translateX(' + currentX + 'px)';
 
       var pw = getPanelWidth();
       var newIdx = Math.max(0, Math.min(numPanels - 1, Math.round(-currentX / pw)));
@@ -289,16 +289,16 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    window.addEventListener(‘scroll’, onScroll, { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true });
 
     dots.forEach(function (dot) {
-      dot.addEventListener(‘click’, function () {
+      dot.addEventListener('click', function () {
         var idx = Number(dot.dataset.stop);
         if (window.innerWidth <= 768) return;
         var totalScroll = outer.offsetHeight - window.innerHeight;
         var progress = numPanels > 1 ? idx / (numPanels - 1) : 0;
         var containerTop = outer.getBoundingClientRect().top + window.scrollY;
-        window.scrollTo({ top: containerTop + progress * totalScroll, behavior: ‘smooth’ });
+        window.scrollTo({ top: containerTop + progress * totalScroll, behavior: 'smooth' });
       });
     });
 
