@@ -32,17 +32,29 @@ document.addEventListener('DOMContentLoaded', function () {
   var navLinks = document.querySelectorAll('.sidebar__nav .nav-link');
   var sections = [];
   navLinks.forEach(function (link) {
-    var id = link.getAttribute('href').replace('#', '');
-    var el = document.getElementById(id);
+    var href = link.getAttribute('href') || '';
+    if (href.charAt(0) !== '#') return;
+
+    var el = document.getElementById(href.slice(1));
     if (el) sections.push({ el: el, link: link });
   });
 
   function updateActiveLink() {
-    var scrollY = window.scrollY + 120;
-    var current = null;
+    var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    var documentHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    var scrollTop = window.scrollY || window.pageYOffset;
+    var activationY = Math.min(viewportHeight * 0.45, 360);
+    var current = sections[0] || null;
+
     sections.forEach(function (s) {
-      if (s.el.offsetTop <= scrollY) current = s;
+      var rect = s.el.getBoundingClientRect();
+      if (rect.top <= activationY && rect.bottom > activationY) current = s;
     });
+
+    if (sections.length && documentHeight - (scrollTop + viewportHeight) <= 8) {
+      current = sections[sections.length - 1];
+    }
+
     navLinks.forEach(function (l) { l.classList.remove('active'); });
     if (current) current.link.classList.add('active');
   }
