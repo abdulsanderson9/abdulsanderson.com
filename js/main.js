@@ -44,12 +44,20 @@ document.addEventListener('DOMContentLoaded', function () {
     var documentHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
     var scrollTop = window.scrollY || window.pageYOffset;
     var activationY = Math.min(viewportHeight * 0.45, 360);
+    var contactActivationY = Math.min(viewportHeight * 0.72, viewportHeight - 96);
     var current = sections[0] || null;
+    var contactSection = null;
 
     sections.forEach(function (s) {
       var rect = s.el.getBoundingClientRect();
-      if (rect.top <= activationY && rect.bottom > activationY) current = s;
+      if (rect.top <= activationY) current = s;
+      if (s.el.id === 'contact') contactSection = s;
     });
+
+    if (contactSection) {
+      var contactRect = contactSection.el.getBoundingClientRect();
+      if (contactRect.top <= contactActivationY) current = contactSection;
+    }
 
     if (sections.length && documentHeight - (scrollTop + viewportHeight) <= 8) {
       current = sections[sections.length - 1];
