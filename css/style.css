@@ -1,9 +1,9 @@
-/* ═══════════════════════════════════════════════
-   Abdul Sanderson — Portfolio
-   Bloomberg/analytical × FT Weekend/academic
-   ═══════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   Abdul Sanderson â€” Portfolio
+   Bloomberg/analytical Ã— FT Weekend/academic
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 
-/* ── Custom Properties ── */
+/* â”€â”€ Custom Properties â”€â”€ */
 :root {
   /* Core palette */
   --color-bg:            #faf9f4;
@@ -25,7 +25,7 @@
   --color-sienna-pale:   #fdf0e8;
   --color-border:        #ddd6c6;
 
-  /* Legacy compatibility — used by project detail pages */
+  /* Legacy compatibility â€” used by project detail pages */
   --color-primary:       #1a5c38;
   --color-primary-light: #2d7a52;
   --color-primary-pale:  #a8d5bb;
@@ -56,7 +56,7 @@
   --transition-slow: 0.6s ease;
 }
 
-/* ── Reset ── */
+/* â”€â”€ Reset â”€â”€ */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -92,7 +92,7 @@ a {
 
 a:hover { color: var(--color-green-dark); }
 
-/* ── Typography ── */
+/* â”€â”€ Typography â”€â”€ */
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
   color: var(--color-text);
@@ -119,7 +119,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   color: var(--color-text-muted);
 }
 
-/* ── Sidebar Navigation ── */
+/* â”€â”€ Sidebar Navigation â”€â”€ */
 .sidebar {
   position: fixed;
   top: 0;
@@ -228,7 +228,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   flex-shrink: 0;
 }
 
-/* Hamburger — mobile */
+/* Hamburger â€” mobile */
 .sidebar__hamburger {
   display: none;
   position: fixed;
@@ -262,13 +262,13 @@ h4 { font-size: 1rem;    font-weight: bold; }
 
 .sidebar__overlay.open { display: block; }
 
-/* ── Main Content ── */
+/* â”€â”€ Main Content â”€â”€ */
 .main-content {
   margin-left: var(--sidebar-width);
   min-height: 100vh;
 }
 
-/* ── Layout ── */
+/* â”€â”€ Layout â”€â”€ */
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -281,7 +281,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
 
 .section__header { margin-bottom: 2.5rem; }
 
-/* ── Buttons ── */
+/* â”€â”€ Buttons â”€â”€ */
 .btn {
   display: inline-block;
   padding: 0.7rem 1.625rem;
@@ -320,7 +320,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   transform: translateY(-1px);
 }
 
-/* ── Scroll Animations ── */
+/* â”€â”€ Scroll Animations â”€â”€ */
 .fade-in {
   opacity: 0;
   transform: translateY(14px);
@@ -332,7 +332,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   transform: translateY(0);
 }
 
-/* ── Hero ── */
+/* â”€â”€ Hero â”€â”€ */
 .hero {
   padding: 5.5rem 0 4.5rem;
   background: var(--color-bg);
@@ -396,7 +396,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   box-shadow: 0 0 0 5px var(--color-border), var(--shadow-lg);
 }
 
-/* ── About ── */
+/* â”€â”€ About â”€â”€ */
 .about__body {
   max-width: 680px;
   display: flex;
@@ -410,7 +410,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   line-height: 1.8;
 }
 
-/* ── Education Cards ── */
+/* â”€â”€ Education Cards â”€â”€ */
 .education-grid-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -439,7 +439,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
 }
 
 .education-card::after {
-  content: 'Explore →';
+  content: 'Explore â†’';
   position: absolute;
   bottom: 1.375rem;
   right: 1.375rem;
@@ -533,7 +533,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   gap: 0.3rem;
 }
 
-/* ── Tags ── */
+/* â”€â”€ Tags â”€â”€ */
 .tag {
   font-family: var(--font-body);
   font-size: 0.6875rem;
@@ -548,7 +548,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   margin-left: 0.2rem;
 }
 
-/* ── Story Map Timeline ── */
+/* â”€â”€ Story Map Timeline â”€â”€ */
 .story-section {
   padding: 0;
   background: var(--color-bg);
@@ -786,17 +786,17 @@ h4 { font-size: 1rem;    font-weight: bold; }
   margin-bottom: 1.375rem;
 }
 
-/* Story panel photo gallery — card fan */
+/* Story panel photo gallery â€” card fan */
 .story-panel__photos {
   position: relative;
-  height: 158px;
+  height: 220px;
   margin-top: 1.25rem;
 }
 
 .story-panel__photo-item {
   position: absolute;
-  width: 158px;
-  height: 118px;
+  width: 210px;
+  height: 158px;
   left: 50%;
   top: 14px;
   border-radius: 8px;
@@ -817,7 +817,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   pointer-events: none;
 }
 
-/* ── Default: stacked fan ── */
+/* â”€â”€ Default: stacked fan â”€â”€ */
 .story-panel__photo-item:nth-child(1) {
   transform: translateX(-50%) rotate(-10deg) translateY(5px);
   z-index: 1;
@@ -831,9 +831,9 @@ h4 { font-size: 1rem;    font-weight: bold; }
   z-index: 3;
 }
 
-/* ── Group hover: spread out ── */
+/* â”€â”€ Group hover: spread out â”€â”€ */
 .story-panel__photos:hover .story-panel__photo-item:nth-child(1) {
-  transform: translateX(calc(-50% - 178px)) rotate(-4deg);
+  transform: translateX(calc(-50% - 225px)) rotate(-4deg);
   z-index: 1;
 }
 .story-panel__photos:hover .story-panel__photo-item:nth-child(2) {
@@ -841,7 +841,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   z-index: 2;
 }
 .story-panel__photos:hover .story-panel__photo-item:nth-child(3) {
-  transform: translateX(calc(-50% + 178px)) rotate(4deg);
+  transform: translateX(calc(-50% + 225px)) rotate(4deg);
   z-index: 3;
 }
 
@@ -850,9 +850,9 @@ h4 { font-size: 1rem;    font-weight: bold; }
   opacity: 0.78;
 }
 
-/* ── Individual card hover: lift, straighten, full opacity ── */
+/* â”€â”€ Individual card hover: lift, straighten, full opacity â”€â”€ */
 .story-panel__photos:hover .story-panel__photo-item:nth-child(1):hover {
-  transform: translateX(calc(-50% - 178px)) rotate(0deg) translateY(-10px) scale(1.07);
+  transform: translateX(calc(-50% - 225px)) rotate(0deg) translateY(-10px) scale(1.07);
   z-index: 10;
   opacity: 1;
   box-shadow: 0 12px 32px rgba(0,0,0,0.28);
@@ -864,13 +864,13 @@ h4 { font-size: 1rem;    font-weight: bold; }
   box-shadow: 0 12px 32px rgba(0,0,0,0.28);
 }
 .story-panel__photos:hover .story-panel__photo-item:nth-child(3):hover {
-  transform: translateX(calc(-50% + 178px)) rotate(0deg) translateY(-10px) scale(1.07);
+  transform: translateX(calc(-50% + 225px)) rotate(0deg) translateY(-10px) scale(1.07);
   z-index: 10;
   opacity: 1;
   box-shadow: 0 12px 32px rgba(0,0,0,0.28);
 }
 
-/* ── Label overlay ── */
+/* â”€â”€ Label overlay â”€â”€ */
 .story-panel__photo-overlay {
   position: absolute;
   inset: 0;
@@ -952,7 +952,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   .story-panel__role { font-size: 1.25rem; }
 }
 
-/* ── Skills ── */
+/* â”€â”€ Skills â”€â”€ */
 .skills-layout {
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -999,7 +999,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   gap: 0.3rem;
 }
 
-/* ── Project Cards ── */
+/* â”€â”€ Project Cards â”€â”€ */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1135,7 +1135,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   margin-top: auto;
 }
 
-/* ── View All ── */
+/* â”€â”€ View All â”€â”€ */
 .view-all {
   text-align: center;
   margin-top: 2rem;
@@ -1156,7 +1156,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   border-color: var(--color-green-dark);
 }
 
-/* ── Credentials ── */
+/* â”€â”€ Credentials â”€â”€ */
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1227,7 +1227,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
 
 .cert-card:hover .cert-card__hint { opacity: 1; }
 
-/* ── Credential Lightbox ── */
+/* â”€â”€ Credential Lightbox â”€â”€ */
 .cred-lightbox {
   display: none;
   position: fixed;
@@ -1333,7 +1333,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   margin: 0 auto;
 }
 
-/* ── Contact Form ── */
+/* â”€â”€ Contact Form â”€â”€ */
 .contact-form {
   max-width: 480px;
   margin: 0 auto 2rem;
@@ -1464,7 +1464,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   background: rgba(255,255,255,0.13);
 }
 
-/* ── Footer ── */
+/* â”€â”€ Footer â”€â”€ */
 .footer {
   background: var(--color-sidebar);
   color: var(--color-white);
@@ -1519,7 +1519,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   color: rgba(255,255,255,0.22);
 }
 
-/* ── Portfolio Page ── */
+/* â”€â”€ Portfolio Page â”€â”€ */
 .page-header {
   padding-top: 5rem;
   padding-bottom: 1rem;
@@ -1568,7 +1568,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   text-align: center;
 }
 
-/* ── Project Detail Pages ── */
+/* â”€â”€ Project Detail Pages â”€â”€ */
 .back-link {
   display: inline-block;
   font-family: var(--font-body);
@@ -1687,7 +1687,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   padding: 0.3rem 0.75rem;
 }
 
-/* ── 404 Page ── */
+/* â”€â”€ 404 Page â”€â”€ */
 .not-found {
   min-height: 70vh;
   display: flex;
@@ -1727,7 +1727,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   justify-content: center;
 }
 
-/* ── Legacy top-nav (project detail pages) ── */
+/* â”€â”€ Legacy top-nav (project detail pages) â”€â”€ */
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -1831,7 +1831,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
   right: 1rem;
 }
 
-/* ── School Pages ── */
+/* â”€â”€ School Pages â”€â”€ */
 .school-hero {
   padding: 4rem 0 3rem;
   border-bottom: 1px solid var(--color-border);
@@ -1950,12 +1950,12 @@ h4 { font-size: 1rem;    font-weight: bold; }
   padding: 0.375rem 0.875rem;
 }
 
-/* ── Filter Transition ── */
+/* â”€â”€ Filter Transition â”€â”€ */
 .project-card[data-category] {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 900px) {
   .skills-layout {
     grid-template-columns: 1fr;
