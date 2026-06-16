@@ -1273,6 +1273,11 @@ h4 { font-size: 1rem;    font-weight: bold; }
   margin-top: auto;
 }
 
+/* Photo card variant — taller preview */
+.photo-card .project-card__preview {
+  height: 190px;
+}
+
 /* â”€â”€ View All â”€â”€ */
 .view-all {
   text-align: center;
