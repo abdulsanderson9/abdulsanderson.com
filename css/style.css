@@ -1224,13 +1224,14 @@ h4 { font-size: 1rem;    font-weight: bold; }
   color: var(--color-white);
 }
 
-.badge--arcgis  { background: #3b82f6; }
-.badge--powerbi { background: #f59e0b; }
-.badge--tableau { background: #10b981; }
-.badge--excel   { background: #6366f1; }
-.badge--urban   { background: #f97316; }
-.badge--finance { background: #0ea5e9; }
-.badge--policy  { background: var(--color-green); }
+.badge--arcgis      { background: #3b82f6; }
+.badge--powerbi     { background: #f59e0b; }
+.badge--tableau     { background: #10b981; }
+.badge--excel       { background: #6366f1; }
+.badge--powerpoint  { background: #d24726; }
+.badge--urban       { background: #f97316; }
+.badge--finance     { background: #0ea5e9; }
+.badge--policy      { background: var(--color-green); }
 
 .project-card__body {
   flex: 1;
