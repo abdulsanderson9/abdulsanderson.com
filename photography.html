@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography — Abdul Sanderson</title>
+  <meta name="description" content="Travel photography by Abdul Sanderson — Central Asia, Turkey, Europe, and beyond.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── Photography page overrides ── */
+    .photo-hero {
+      background: #111;
+      color: #fff;
+      padding: 4rem 2rem 3rem;
+      margin-left: var(--sidebar-width);
+    }
+    @media (max-width: 768px) { .photo-hero { margin-left: 0; padding-top: 5rem; } }
+
+    .photo-hero__eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 0.6rem;
+    }
+    .photo-hero__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: normal;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .photo-hero__desc {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: #aaa;
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    /* ── Gallery grid ── */
+    .photo-gallery-wrap {
+      background: #111;
+      margin-left: var(--sidebar-width);
+      padding: 0 1.5rem 4rem;
+    }
+    @media (max-width: 768px) { .photo-gallery-wrap { margin-left: 0; padding: 0 0.75rem 3rem; } }
+
+    .photo-grid {
+      columns: 3 280px;
+      column-gap: 10px;
+    }
+    @media (max-width: 600px) { .photo-grid { columns: 2 140px; column-gap: 6px; } }
+
+    .photo-grid__item {
+      break-inside: avoid;
+      position: relative;
+      margin-bottom: 10px;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    @media (max-width: 600px) { .photo-grid__item { margin-bottom: 6px; } }
+
+    .photo-grid__item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.5s ease, filter 0.3s ease;
+    }
+    .photo-grid__item:hover img {
+      transform: scale(1.03);
+      filter: brightness(0.75);
+    }
+
+    .photo-grid__caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem 0.85rem 0.75rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, transparent 100%);
+      color: #fff;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      pointer-events: none;
+    }
+    .photo-grid__item:hover .photo-grid__caption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .photo-grid__caption-title {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 500;
+      line-height: 1.35;
+      margin-bottom: 0.15rem;
+    }
+    .photo-grid__caption-loc {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 400;
+      color: var(--color-gold);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Lightbox ── */
+    .lb {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.93);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+    .lb.open { display: flex; }
+
+    .lb__img-wrap {
+      position: relative;
+      max-width: min(90vw, 1200px);
+      max-height: 82vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lb__img {
+      max-width: 100%;
+      max-height: 82vh;
+      border-radius: 4px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+      display: block;
+    }
+    .lb__meta {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .lb__meta-title {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #fff;
+    }
+    .lb__meta-loc {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      color: var(--color-gold);
+      margin-top: 0.2rem;
+      letter-spacing: 0.06em;
+    }
+    .lb__close {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.8rem;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+      z-index: 10;
+      line-height: 1;
+    }
+    .lb__close:hover { opacity: 1; }
+    .lb__nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.12);
+      border: none;
+      color: #fff;
+      font-size: 1.6rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      z-index: 10;
+    }
+    .lb__nav:hover { background: rgba(255,255,255,0.24); }
+    .lb__nav--prev { left: -3.5rem; }
+    .lb__nav--next { right: -3.5rem; }
+    @media (max-width: 768px) {
+      .lb__nav--prev { left: 0.5rem; }
+      .lb__nav--next { right: 0.5rem; }
+    }
+    .lb__counter {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      color: #888;
+      margin-top: 0.5rem;
+      letter-spacing: 0.08em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__identity">
+      <p class="sidebar__name">Abdul Sanderson</p>
+      <p class="sidebar__tagline">Rangel Fellow &middot; SAIS &rsquo;26</p>
+    </div>
+
+    <p class="sidebar__section-label">Navigate</p>
+    <ul class="sidebar__nav">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#education">Education</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="photography.html" class="active" aria-current="page">Photography</a></li>
+      <li><a href="index.html#certifications">Credentials</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <div class="sidebar__legend">
+      <p class="sidebar__legend-label">Color key</p>
+      <div class="sidebar__legend-items">
+        <div class="sidebar__legend-item">
+          <span class="sidebar__legend-dot" style="background:#1a5c38;"></span>
+          Education
+        </div>
+        <div class="sidebar__legend-item">
+          <span class="sidebar__legend-dot" style="background:#c8b97a;"></span>
+          Experience
+        </div>
+        <div class="sidebar__legend-item">
+          <span class="sidebar__legend-dot" style="background:#8b4513;"></span>
+          Projects
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="sidebar__overlay" id="sidebarOverlay"></div>
+  <button class="sidebar__hamburger" id="sidebarHamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- ── Hero ── -->
+  <div class="photo-hero">
+    <p class="photo-hero__eyebrow">Visual Journal</p>
+    <h1 class="photo-hero__title">Photography</h1>
+    <p class="photo-hero__desc">Images from across Central Asia, the Caucasus, Turkey, and Europe — collected over several years of travel, fieldwork, and diplomatic work.</p>
+  </div>
+
+  <!-- ── Gallery ── -->
+  <div class="photo-gallery-wrap">
+    <div class="photo-grid" id="photoGrid">
+
+      <div class="photo-grid__item" data-title="Kaindy Lake" data-loc="Almaty Oblast, Kazakhstan">
+        <img src="assets/images/photography/photo_02.jpg" alt="Submerged spruce trees rising from snow-covered Kaindy Lake, Kazakhstan" loading="lazy">
+        <div class="photo-grid__caption">
+          <p class="photo-grid__caption-title">Kaindy Lake</p>
+          <p class="photo-grid__caption-loc">Almaty Oblast, Kazakhstan</p>
+        </div>
+      </div>
+
+      <div class="photo-grid__item" data-title="Son-Kul at Dusk" data-loc="Naryn Oblast, Kyrgyzstan">
+        <img src="assets/images/photography/photo_24.jpg" alt="Yurt camp silhouetted against deep blue twilight at Son-Kul Lake, Kyrgyzstan" loading="lazy">
+        <div class="photo-grid__caption">
+          <p class="photo-grid__caption-title">Son-Kul at Dusk</p>
+          <p class="photo-grid__caption-loc">Naryn Oblast, Kyrgyzstan</p>
+        </div>
+      </div>
+
+      <div class="photo-grid__item" data-title="Before Dawn" data-loc="Göreme, Cappadocia, Turkey">
+        <img src="assets/images/photography/photo_17.jpg" alt="Silhouettes of hot air balloons drifting across an orange and blue sunrise sky over Cappadocia" loading="lazy">
+        <div class="photo-grid__caption">
+          <p class="photo-grid__caption-title">Before Dawn</p>
+          <p class="photo-grid__caption-loc">Göreme, Cappadocia, Turkey</p>
+        </div>
+      </div>
+
+      <div class="photo-grid__item" data-title="Neon Pavilion" data-loc="Central Asia">
+        <img src="assets/images/photography/photo_05.jpg" alt="Abstract neon light installation with vivid multicolor streaks" loading="lazy">
+        <div class="photo-grid__caption">
+          <p class="photo-grid__caption-title">Neon Pavilion</p>
+          <p class="photo-grid__caption-loc">Central Asia</p>
+        </div>
+      </div>
+
+      <div class="photo-grid__item" data-title="Son-Kul at Sunset" data-loc="Naryn Oblast, Kyrgyzstan">
+        <img src="assets/images/photography/photo_23.jpg" alt="Yurt camp with warm golden sunset light over Son-Kul Lake in winter, Kyrgyzstan" loading="lazy">
+        <div class="photo-grid__caption">
+          <p class="photo-grid__caption-title">Son-Kul at Sunset</p>
+          <p class="photo-grid__caption-loc">Naryn Oblast, Kyrgyzstan</p>
+        </div>
+      </div>
+
+      <div class="photo-grid__item" data-title="Tilya-Kori Madrasah" data-loc="Samarkand, Uzbekistan">
+        <img src="assets/images/photography/photo_07.jpg" alt="Intricate facade of the Tilya-Kori Madrasah on the Registan in Samarkand under a deep blue sky" loading="lazy">
+        <div class="photo-grid__caption">
+          <p class="photo-grid__caption-title">Tilya-Kori Madrasah</p>
+          <p class="photo-grid__caption-loc">Samarkand, Uzbekistan</p>
+        </div>
+      </div>
+
+      <div class="photo-grid__item" data-title="Ascension Cathedral" data-loc="Almaty, Kazakhstan">
+        <img src="assets/images/photography/photo_03.jpg" alt="Yellow and white Ascension Cathedral in Almaty surrounded by snow-covered trees and morning sunlight" loading="lazy">
+        <div class="photo-grid__caption">
+          <p class="photo-grid__caption-title">Ascension Cathedral</p>
+          <p class="photo-grid__caption-loc">Almaty, Kazakhstan</p>
+        </div>
+      </div>
+
+      <div class="photo-grid__item" data-title="Duden Falls" data-loc="Antalya, Turkey">
+        <img src="assets/images/photography/photo_20.jpg" alt="Silky long-exposure waterfall spilling over moss and hanging vines at Duden Falls, Turkey" loading="lazy">
+        <div class="photo-grid__caption">
+          <p class="photo-grid__caption-title">Duden Falls</p>
+          <p class="photo-grid__caption-loc">Antalya, Turkey</p>
+        </div>
+      </div>
+
+      <div class="photo-grid__item" data-title="Inside the Yurt" data-loc="Naryn, Kyrgyzstan">
+        <img src="assets/images/photography/photo_25.jpg" alt="Traditional Kyrgyz yurt interior with Nowruz feast spread beneath the tunduk skylight" loading="lazy">
+        <div class="photo-grid__caption">
+          <p class="photo-grid__caption-title">Inside the Yurt</p>
+          <p class="photo-grid__caption-loc">Naryn, Kyrgyzstan</p>
+        </div>
+      </div>
+
+      <div class="photo-grid__item" data-title="Grand Canal Gondolas" data-loc="Venice, Italy">
+        <img src="assets/images/photography/photo_14.jpg" alt="Row of moored gondolas on the Grand Canal with San Giorgio Maggiore in the distance, Venice" loading="lazy">
+        <div class="photo-grid__caption">
+          <p class="photo-grid__caption-title">Grand Canal Gondolas</p>
+          <p class="photo-grid__caption-loc">Venice, Italy</p>
+        </div>
+      </div>
+
+      <div class="photo-grid__item" data-title="Ascent" data-loc="Göreme, Cappadocia, Turkey">
+        <img src="assets/images/photography/photo_19.jpg" alt="Dozens of hot air balloons ascending at dawn over Cappadocia, Turkey" loading="lazy">
+        <div class="photo-grid__caption">
+          <p class="photo-grid__caption-title">Ascent</p>
+          <p class="photo-grid__caption-loc">Göreme, Cappadocia, Turkey</p>
+        </div>
+      </div>
+
+      <div class="photo-grid__item" data-title="Winter Yurt Frames" data-loc="Naryn, Kyrgyzstan">
+        <img src="assets/images/photography/photo_28.jpg" alt="Skeletal yurt frames in deep snow against a forested mountain with a halo of winter sun" loading="lazy">
+        <div class="photo-grid__caption">
+          <p class="photo-grid__caption-title">Winter Yurt Frames</p>
+          <p class="photo-grid__caption-loc">Naryn, Kyrgyzstan</p>
+        </div>
+      </div>
+
+      <div class="photo-grid__item" data-title="Casa Batlló" data-loc="Barcelona, Spain">
+        <img src="assets/images/photography/photo_12.jpg" alt="Close-up of Casa Batlló's mosaic facade with organic bone-shaped balconies, Barcelona" loading="lazy">
+        <div class="photo-grid__caption">
+          <p class="photo-grid__caption-title">Casa Batlló</p>
+          <p class="photo-grid__caption-loc">Barcelona, Spain</p>
+        </div>
+      </div>
+
+      <div class="photo-grid__item" data-title="Plov at Besh Qozon" data-loc="Tashkent, Uzbekistan">
+        <img src="assets/images/photography/photo_04.jpg" alt="Cooks stirring an enormous plov cauldron at Besh Qozon restaurant in Tashkent, Uzbekistan" loading="lazy">
+        <div class="photo-grid__caption">
+          <p class="photo-grid__caption-title">Plov at Besh Qozon</p>
+          <p class="photo-grid__caption-loc">Tashkent, Uzbekistan</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Lightbox ── -->
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo lightbox">
+    <button class="lb__close" id="lbClose" aria-label="Close">&times;</button>
+    <div class="lb__img-wrap">
+      <button class="lb__nav lb__nav--prev" id="lbPrev" aria-label="Previous photo">&#8249;</button>
+      <img class="lb__img" id="lbImg" src="" alt="">
+      <button class="lb__nav lb__nav--next" id="lbNext" aria-label="Next photo">&#8250;</button>
+    </div>
+    <div class="lb__meta">
+      <p class="lb__meta-title" id="lbTitle"></p>
+      <p class="lb__meta-loc" id="lbLoc"></p>
+    </div>
+    <p class="lb__counter" id="lbCounter"></p>
+  </div>
+
+  <script src="js/main.js?v=contact-nav-20260612"></script>
+  <script>
+    const items = Array.from(document.querySelectorAll('.photo-grid__item'));
+    const lb = document.getElementById('lb');
+    const lbImg = document.getElementById('lbImg');
+    const lbTitle = document.getElementById('lbTitle');
+    const lbLoc = document.getElementById('lbLoc');
+    const lbCounter = document.getElementById('lbCounter');
+    let current = 0;
+
+    function openLb(idx) {
+      current = idx;
+      const item = items[current];
+      const img = item.querySelector('img');
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lbTitle.textContent = item.dataset.title;
+      lbLoc.textContent = item.dataset.loc;
+      lbCounter.textContent = (current + 1) + ' / ' + items.length;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLb() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function nav(dir) {
+      current = (current + dir + items.length) % items.length;
+      openLb(current);
+    }
+
+    items.forEach((item, i) => item.addEventListener('click', () => openLb(i)));
+    document.getElementById('lbClose').addEventListener('click', closeLb);
+    document.getElementById('lbPrev').addEventListener('click', () => nav(-1));
+    document.getElementById('lbNext').addEventListener('click', () => nav(1));
+    lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLb();
+      if (e.key === 'ArrowLeft') nav(-1);
+      if (e.key === 'ArrowRight') nav(1);
+    });
+  </script>
+
+</body>
+</html>
