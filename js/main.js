@@ -261,12 +261,13 @@ document.addEventListener('DOMContentLoaded', function () {
     setContainerHeight();
     window.addEventListener('resize', setContainerHeight);
 
-    var currentX = 0;
-    var targetX  = 0;
-    var rafId    = null;
+    var currentX  = 0;
+    var targetX   = 0;
+    var rafId     = null;
     var activeIdx = 0;
-
-    function lerp(a, b, t) { return a + (b - a) * t; }
+    var snapIndex    = 0;
+    var exitReady    = false;
+    var snapCooldown = false;
 
     function updateChrome(idx) {
       var progress = numPanels > 1 ? idx / (numPanels - 1) : 0;
@@ -278,47 +279,83 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function tick() {
-      currentX = lerp(currentX, targetX, 0.1);
-      if (Math.abs(currentX - targetX) < 0.5) { currentX = targetX; rafId = null; }
+      currentX = targetX;
       track.style.transform = 'translateX(' + currentX + 'px)';
-
+      rafId = null;
       var pw = getPanelWidth();
       var newIdx = Math.max(0, Math.min(numPanels - 1, Math.round(-currentX / pw)));
       if (newIdx !== activeIdx) {
         activeIdx = newIdx;
         updateChrome(activeIdx);
       }
+    }
 
-      if (rafId !== null) requestAnimationFrame(tick);
+    function snapTo(idx) {
+      idx = Math.max(0, Math.min(numPanels - 1, idx));
+      snapIndex = idx;
+      exitReady = false;
+      var pw = getPanelWidth();
+      targetX  = -idx * pw;
+      currentX = targetX;
+      track.style.transform = 'translateX(' + currentX + 'px)';
+      rafId = null;
+      activeIdx = idx;
+      updateChrome(idx);
+      var totalScroll  = outer.offsetHeight - window.innerHeight;
+      var containerTop = outer.getBoundingClientRect().top + window.scrollY;
+      var progress     = numPanels > 1 ? idx / (numPanels - 1) : 0;
+      window.scrollTo(0, containerTop + progress * totalScroll);
     }
 
     function onScroll() {
       if (window.innerWidth <= 768) return;
       var rect = outer.getBoundingClientRect();
-      var scrolled = -rect.top;
+      var scrolled    = -rect.top;
       var totalScroll = rect.height - window.innerHeight;
       if (totalScroll <= 0) return;
-
       var progress = Math.max(0, Math.min(1, scrolled / totalScroll));
       var pw = getPanelWidth();
-      targetX = -progress * (numPanels - 1) * pw;
-
-      if (rafId === null) {
-        rafId = 1;
-        requestAnimationFrame(tick);
-      }
+      targetX   = -progress * (numPanels - 1) * pw;
+      snapIndex = Math.round(progress * (numPanels - 1));
+      if (snapIndex < numPanels - 1) exitReady = false;
+      if (rafId === null) { rafId = 1; requestAnimationFrame(tick); }
     }
 
     window.addEventListener('scroll', onScroll, { passive: true });
 
+    outer.addEventListener('wheel', function (e) {
+      if (window.innerWidth <= 768) return;
+      var rect = outer.getBoundingClientRect();
+      if (rect.top > 0 || rect.bottom < window.innerHeight) return;
+
+      var dir     = e.deltaY > 0 ? 1 : -1;
+      var nextIdx = snapIndex + dir;
+
+      if (nextIdx < 0) return;
+
+      if (nextIdx >= numPanels) {
+        if (!exitReady) {
+          e.preventDefault();
+          if (!snapCooldown) {
+            exitReady    = true;
+            snapCooldown = true;
+            setTimeout(function () { snapCooldown = false; }, 500);
+          }
+        }
+        return;
+      }
+
+      e.preventDefault();
+      if (snapCooldown) return;
+      snapCooldown = true;
+      setTimeout(function () { snapCooldown = false; }, 400);
+      snapTo(nextIdx);
+    }, { passive: false });
+
     dots.forEach(function (dot) {
       dot.addEventListener('click', function () {
-        var idx = Number(dot.dataset.stop);
         if (window.innerWidth <= 768) return;
-        var totalScroll = outer.offsetHeight - window.innerHeight;
-        var progress = numPanels > 1 ? idx / (numPanels - 1) : 0;
-        var containerTop = outer.getBoundingClientRect().top + window.scrollY;
-        window.scrollTo({ top: containerTop + progress * totalScroll, behavior: 'smooth' });
+        snapTo(Number(dot.dataset.stop));
       });
     });
 
