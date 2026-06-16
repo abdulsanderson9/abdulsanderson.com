@@ -177,10 +177,10 @@ document.addEventListener('DOMContentLoaded', function () {
     new Chart(radarCanvas.getContext('2d'), {
       type: 'radar',
       data: {
-        labels: ['GIS / Geospatial', 'Data Analysis', 'Visualization', 'Policy Research', 'Languages', 'Diplomacy'],
+        labels: ['GIS / Geospatial', 'Data Analysis', 'Visualization', 'Policy Research', 'Languages', 'Diplomacy', 'Photography'],
         datasets: [{
           label: 'Proficiency',
-          data: [9, 8, 8, 9, 7, 9],
+          data: [7, 6, 6, 7, 5, 7, 5],
           backgroundColor: 'rgba(26, 92, 56, 0.12)',
           borderColor: '#1a5c38',
           borderWidth: 1.75,
