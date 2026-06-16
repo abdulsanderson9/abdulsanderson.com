@@ -789,14 +789,14 @@ h4 { font-size: 1rem;    font-weight: bold; }
 /* Story panel photo gallery â€” card fan */
 .story-panel__photos {
   position: relative;
-  height: 220px;
+  height: 295px;
   margin-top: 1.25rem;
 }
 
 .story-panel__photo-item {
   position: absolute;
-  width: 210px;
-  height: 158px;
+  width: 270px;
+  height: 202px;
   left: 50%;
   top: 14px;
   border-radius: 8px;
