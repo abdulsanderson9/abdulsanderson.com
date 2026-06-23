@@ -14,6 +14,7 @@
     .storymap-wrap {
       width: 100%;
       margin-top: 2rem;
+      margin-bottom: 3rem;
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 4px 24px rgba(0,0,0,0.12);
@@ -21,8 +22,8 @@
     .storymap-wrap iframe {
       display: block;
       width: 100%;
-      height: 80vh;
-      min-height: 500px;
+      height: 95vh;
+      min-height: 600px;
       border: none;
     }
   </style>
@@ -73,6 +74,45 @@
         allowfullscreen
         allow="geolocation">
       </iframe>
+    </div>
+
+    <h2 class="project-detail__title fade-in" style="margin-top:3rem;">Ho Chi Minh City: Deep-Dive Research</h2>
+
+    <p class="project-detail__desc fade-in">
+      As part of this coastal risk analysis initiative, I conducted detailed geospatial research on Ho Chi Minh City,
+      one of the world's most climate-vulnerable megacities. Using Digital Elevation Model (DEM) data and population
+      projections for 2026 and 2100, the analysis identifies zones at risk of inundation and estimates the population
+      potentially affected under different sea level rise scenarios.
+    </p>
+
+    <div class="embed-container fade-in">
+      <img src="../assets/images/projects/hcmc-slr.png" alt="Sea Level Risk Assessment – Ho Chi Minh City 2100 (Risk Zones)" style="border-radius: 4px; margin-bottom: 1.5rem;">
+    </div>
+
+    <div class="embed-container fade-in">
+      <img src="../assets/images/projects/hcmc-slr-buildings.png" alt="Sea Level Risk Assessment – Ho Chi Minh City 2100 (Buildings Overlay)" style="border-radius: 4px;">
+    </div>
+
+    <div class="project-detail__findings fade-in">
+      <h3>Key Findings</h3>
+      <ul>
+        <li>Low-lying southern and southwestern districts — including Nha Be, Binh Chanh, and Can Gio — face the greatest inundation exposure, with large portions falling below the critical 1-meter elevation threshold under projected sea level rise scenarios.</li>
+        <li>The 2100 risk profile is dramatically wider than the 2026 baseline, with inundation zones expanding significantly into densely populated urban districts under high-end projections, underscoring the urgency of near-term adaptive planning rather than deferring mitigation to future decades.</li>
+        <li>Population exposure is concentrated in areas that also host critical infrastructure — roads, industrial zones, and residential centers — compounding the economic cost of inaction beyond direct displacement alone.</li>
+        <li>The overlay of DEM elevation data with population projections reveals that the communities at highest physical risk are not uniformly the highest-density areas, indicating that risk mapping based on elevation alone understates the true human exposure in certain zones.</li>
+      </ul>
+    </div>
+
+    <div class="project-detail__tools fade-in" style="padding-bottom: 4rem;">
+      <h3>Tools &amp; Methods</h3>
+      <div class="tools-list">
+        <span class="tag">QGIS</span>
+        <span class="tag">DEM Analysis</span>
+        <span class="tag">Raster Processing</span>
+        <span class="tag">Population Modeling</span>
+        <span class="tag">Climate Risk</span>
+        <span class="tag">Zonal Statistics</span>
+      </div>
     </div>
 
   </div>
