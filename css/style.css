@@ -1093,7 +1093,7 @@ h4 { font-size: 1rem;    font-weight: bold; }
 /* â”€â”€ Skills â”€â”€ */
 .skills-layout {
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 500px 1fr;
   gap: 3rem;
   align-items: start;
 }
